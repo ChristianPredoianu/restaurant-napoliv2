@@ -1,79 +1,68 @@
 import { useState, useRef } from 'react';
+import gsap from 'gsap';
+import NavLogo from '@/components/nav/NavLogo';
+import DarkModeToggler from '@/components/nav/DarkModeToggler';
+import NavLinks from '@/components/nav/NavLinks';
+import Hamburger from '@/components/nav/Hamburger';
 
-export default function Nav() {
-  const [isModalOpen, setModalOpen] = useState(false);
+export default function Navbar() {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
-  const ref = useRef(null);
+  const navLinksRef = useRef(null);
+
+  const navLinks = [
+    { name: 'Hem', path: '/' },
+    { name: 'Meny', path: '/meny' },
+    { name: 'Drycker', path: '/drycker' },
+    { name: 'Kontakta oss', path: '/kontakta-oss' },
+    { name: 'Logga In', path: '/logga-in' },
+    ,
+  ];
+
+  function fadeInNav() {
+    if (!gsap.isTweening(navLinksRef.current)) {
+      gsap.from(navLinksRef.current, {
+        duration: 0.3,
+        y: -100,
+        opacity: 0,
+        rotate: 10,
+      });
+    }
+  }
+
+  function toggleNavbarHandler() {
+    setIsNavbarOpen(!isNavbarOpen);
+    fadeInNav();
+  }
 
   return (
-    <div className="flex container w-full mx-auto justify-between items-center font-bold text-2xl px-5  py-6">
-      <Link href="/">
-        <h1 className="h-[3.5rem] flex items-center text-center">Logo</h1>
-      </Link>
-      <nav className="hidden md:flex space-x-10 items-center"></nav>
-      <div className="md:hidden">
-        {isModalOpen ? (
-          <div
-            ref={ref}
-            className="bg-[#161B21] border-[1px] border-red-100/20  fixed w-[24rem] right-0 top-0 h-[100vh] transition translate-x-[-1px] rounded-lg  text-white"
-          >
-            <div className="pt-5 pb-6 px-5">
-              <button
-                onClick={() => setModalOpen(!isModalOpen)}
-                className="-mr-2 float-right mb-3"
+    <>
+      <header className="absolute z-50 w-full top-0">
+        <nav className="relative flex flex-wrap items-center justify-between py-3 mb-3">
+          <div className="container mx-auto flex flex-wrap items-center px-8 justify-between">
+            <NavLogo />
+            <DarkModeToggler />
+            <Hamburger
+              isNavbarOpen={isNavbarOpen}
+              onToggleNavbar={toggleNavbarHandler}
+            />
+            <div className="w-full  relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start"></div>
+            <div
+              className={`lg:flex flex-grow items-center 
+             ${isNavbarOpen ? ' flex' : ' hidden'}`}
+            >
+              <ul
+                className="w-full absolute lg:static top-0 left-0 h-screen lg:h-auto justify-center  lg:w-auto flex flex-col items-center lg:flex-row list-none lg:ml-auto bg-amber-700 lg:bg-transparent py-10 px-2"
+                ref={navLinksRef}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                  className="h-6 w-6"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
-                </svg>
-              </button>
-
-              <div className="mt-[5rem] z-10 relative">
-                <nav className="grid gap-y-8">
-                  {navData.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-black/20 border-[1px] border-gray-500/60"
-                    >
-                      <h1 className="my-3 ml-3 text-3xl font-bold ">
-                        {item.name}
-                      </h1>
-                    </a>
-                  ))}
-                </nav>
-              </div>
+                {navLinks.map((link) => (
+                  <NavLinks link={link} key={link.name} />
+                ))}
+              </ul>
             </div>
           </div>
-        ) : (
-          <button onClick={() => setModalOpen(!isModalOpen)}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="white"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-              />
-            </svg>
-          </button>
-        )}
-      </div>
-    </div>
+        </nav>
+      </header>
+    </>
   );
 }
