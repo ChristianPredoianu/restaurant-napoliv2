@@ -35,6 +35,10 @@ export default function Navbar() {
     fadeInNav();
   }
 
+  function closeNavbarHandler() {
+    setIsNavbarOpen(false);
+  }
+
   return (
     <>
       <header className="absolute z-50 w-full top-0">
@@ -56,7 +60,11 @@ export default function Navbar() {
                 ref={navLinksRef}
               >
                 {navLinks.map((link) => (
-                  <NavLinks link={link} key={link.name} />
+                  <NavLinks
+                    link={link}
+                    key={link.name}
+                    onCloseNavbar={closeNavbarHandler}
+                  />
                 ))}
               </ul>
             </div>

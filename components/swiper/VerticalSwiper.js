@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, useSwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import PizzaImg from '@/assets/images/pizza1.png';
@@ -15,16 +14,9 @@ import SwiperContent from '@/components/swiper/SwiperContent';
 import { Autoplay, Pagination } from 'swiper';
 
 export default function VerticalSwiper() {
-  useEffect(() => {
-    const root = window.document.documentElement;
-    console.log(root.classList.value);
-    if (root.classList.value === 'light') {
-      const swiperSlide = document.querySelector('.swiper-slide');
-      swiperSlide.classList.add('.bg-red-500');
-      console.log(swiperSlide);
-    }
-  });
+  const swiperSlide = useSwiperSlide();
 
+  console.log(swiperSlide);
   const content = [
     { id: 1, img: PizzaImg },
     { id: 2, img: HamburgerImg },
@@ -36,6 +28,7 @@ export default function VerticalSwiper() {
     { id: 8, img: BeerImg },
     { id: 9, img: Salad2Img },
   ];
+
   return (
     <div className="swiper-container">
       <Swiper
@@ -52,7 +45,7 @@ export default function VerticalSwiper() {
       >
         {content.map((item) => (
           <SwiperSlide key={item.id}>
-            <SwiperContent img={item.img} />
+            {<SwiperContent img={item.img} />}
           </SwiperSlide>
         ))}
       </Swiper>
