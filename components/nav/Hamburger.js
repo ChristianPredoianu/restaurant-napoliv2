@@ -1,5 +1,5 @@
 export default function Hamburger({ isNavbarOpen, onToggleNavbar }) {
-  const genericHamburgerLine = `h-1 w-10 my-1 rounded-full bg-black transition ease transform duration-300 bg-black`;
+  const genericHamburgerLine = `h-1 w-10 my-1 rounded-full bg-black transition ease transform duration-300 bg-black dark:bg-amber-600`;
   return (
     <>
       <button
@@ -9,17 +9,17 @@ export default function Hamburger({ isNavbarOpen, onToggleNavbar }) {
       >
         <div
           className={`${genericHamburgerLine} ${
-            isNavbarOpen ? 'rotate-45 translate-y-3 ' : ''
+            isNavbarOpen ? 'rotate-45 translate-y-3 dark:bg-white' : ''
           }`}
         />
         <div
           className={`${genericHamburgerLine} ${
-            isNavbarOpen ? 'opacity-0' : ''
+            isNavbarOpen ? 'opacity-0 ' : ''
           }`}
         />
         <div
           className={`${genericHamburgerLine} ${
-            isNavbarOpen ? '-rotate-45 -translate-y-3 ' : ''
+            isNavbarOpen ? '-rotate-45 -translate-y-3 dark:bg-white' : ''
           }`}
         />
       </button>
