@@ -1,20 +1,14 @@
-import MenuList from '@/components/menu-list/MenuList';
-import data from '../../data.json';
-export default function MenuCard({ heading }) {
-  console.log(data + 'menu');
+export default function MenuCard({ heading, subHeading, children }) {
   return (
-    <div className="shadow-2xl px-4">
-      <h1 className="text-4xl uppercase text-center text-red-700">{heading}</h1>
-      <MenuList
-        data={data.pizza.priceclass1}
-        subHeading={'Tomat & ost ingår på alla pizzor'}
-        price={'Prisklass 1/90:-, Familjepizza 220:-'}
-      />
+    <div className="w-full lg:w-2/5 shadow-3xl px-4 py-10">
+      <div>
+        <h1 className="text-4xl uppercase text-center text-red-700">
+          {heading}
+        </h1>
+        <h2 className="text-center mt-2">{subHeading}</h2>
 
-      <MenuList
-        data={data.pizza.priceclass2}
-        price={'Prisklass 2/95:-, Familjepizza 230:-'}
-      />
+        {children}
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
 import SocialMediaTab from '@/components/ui/SocialMediaTab';
 import Circle from '@/components/ui/Circle';
-import Swiper from '@/components/swiper/VerticalSwiper';
+import Swiper from '@/components/vertical-swiper/VerticalSwiper';
 
 export default function Home() {
   const ctaContainerRef = useRef(null);
@@ -14,13 +14,13 @@ export default function Home() {
   const circleRef = useRef(null);
   const socialMediaTabRef = useRef(null);
 
+  const q = gsap.utils.selector(ctaContainerRef);
+  const tl = gsap.timeline();
+
   let isAnimation;
   useIsomorphicLayoutEffect(() => {
     isAnimation = sessionStorage.getItem('isHeroAnimated');
   }, []);
-
-  const q = gsap.utils.selector(ctaContainerRef);
-  const tl = gsap.timeline();
 
   useIsomorphicLayoutEffect(() => {
     if (!isAnimation) {
@@ -45,6 +45,7 @@ export default function Home() {
         },
       });
     }
+    return () => tl.kill();
   }, []);
 
   return (

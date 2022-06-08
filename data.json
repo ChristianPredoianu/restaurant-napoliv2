@@ -1,5 +1,5 @@
 {
-  "pizza": {
+  "meals": {
     "priceclass1": [
       {
         "id": "1",
@@ -267,469 +267,469 @@
         "name": "Oredslund Special",
         "content": "Skinka, salami, bacon, vitlöksost"
       }
+    ],
+    "kebabPizzas": [
+      {
+        "id": "1",
+        "name": "Kebabpizza kebab eller gyros, valfri sås",
+        "content": "",
+        "priceNormal": "110",
+        "priceFamily": "260"
+      },
+      {
+        "id": "2",
+        "name": "Calzone Kebab",
+        "content": "Skinka, kebab eller gyros, lök (inbakad)",
+        "priceNormal": "110",
+        "priceFamily": ""
+      },
+      {
+        "id": "3",
+        "name": "Viking pizza",
+        "content": "Kebabkött/gyros, skinka, lök, starkt kryddad, valfri sås",
+        "priceNormal": "115",
+        "priceFamily": "270"
+      },
+      {
+        "id": "4",
+        "name": "Vikingbåt",
+        "content": "Kebabkött/gyros, skinka, lök, valfri sås (halvinbakad)1",
+        "priceNormal": "115",
+        "priceFamily": ""
+      },
+      {
+        "id": "5",
+        "name": "Neptun",
+        "content": "Kebab/gyros, pommes, valfri sås",
+        "priceNormal": "115",
+        "priceFamily": "270"
+      },
+      {
+        "id": "6",
+        "name": "Kebab Special",
+        "content": "Kebab/gyros isbergssallad, tomater, gurka, lök, feferoni, valfri sås",
+        "priceNormal": "115",
+        "priceFamily": "270"
+      },
+      {
+        "id": "7",
+        "name": "Bagaren Special",
+        "content": "Kebab/gyros, champinjoner, lök, vitlöksost",
+        "priceNormal": "115",
+        "priceFamily": "270"
+      },
+      {
+        "id": "8",
+        "name": "Kebab Super",
+        "content": "Kebab/gyros, pommes isbergssallad, tomater, gurka, lök, feferoni, valfri sås",
+        "priceNormal": "120",
+        "priceFamily": "280"
+      },
+      {
+        "id": "9",
+        "name": "Mexikansk kebabpizza",
+        "content": "Svamp,lök, jalapeno, gyros, vitlök, tacosås, tacokryddmix",
+        "priceNormal": "120",
+        "priceFamily": "280"
+      }
+    ],
+    "specialPizzas": [
+      {
+        "id": "53",
+        "name": "Olofström",
+        "content": "Oxfilé, lök, färska tomater, kantareller, bearnaisesås"
+      },
+      {
+        "id": "54",
+        "name": "Grekisk pizza",
+        "content": " Oxfilé, fetaost, soltorkade tomater, oliver, ruccola, nymalen peppar"
+      },
+      {
+        "id": "55",
+        "name": "Capricciosa Super",
+        "content": "Skinka, champinjoner, räkor, oxfilé, bearnaisesås"
+      },
+      {
+        "id": "56",
+        "name": "Kyckling Special",
+        "content": "Marinerad kyckling, stekt zucchini, ruccola, färsk paprika, färska tomater"
+      },
+      {
+        "id": "57",
+        "name": "Napoli Special",
+        "content": "Skinka, champinjoner, bacon, lök, paprika, köttfärsås, tabasco, vitlök"
+      },
+      {
+        "id": "58",
+        "name": "Acapulco",
+        "content": "Oxfilé, tacokryddmix/sås, vitlök, lök, champinjoner, jalapeno"
+      }
+    ],
+
+    "plankPizzas": [
+      {
+        "id": "1",
+        "name": "Plankpizza 1",
+        "content": "Potatismos, oxfilé, lök, färsk tomat, bearnaise"
+      },
+      {
+        "id": "2",
+        "name": "Plankpizza 2",
+        "content": "Potatismos, kebabkött, lök, paprika, champinjoner, valfri sås"
+      },
+      {
+        "id": "3",
+        "name": "Plankpizza 3",
+        "content": "Oxfilé, potatismos, bacon, färsk tomat, persiljesmör med stark krydda"
+      }
+    ],
+
+    "americanPanPizzas": [
+      {
+        "id": "1",
+        "name": "Miami",
+        "content": "Skinka, svamp, tomater, ananas"
+      },
+      {
+        "id": "2",
+        "name": "Las Vegas",
+        "content": "Skinka, salami, tomater, paprika, svamp, oliver"
+      },
+      {
+        "id": "3",
+        "name": "New York",
+        "content": "Köttfärs, paprika, tomater, svamp, lök"
+      },
+      {
+        "id": "4",
+        "name": "Dallas",
+        "content": "Kebabkött, svamp, tomater, lök, feferoni, valfri sås"
+      },
+      {
+        "id": "5",
+        "name": "Arizona",
+        "content": "Skinka, svamp, paprika, salami, köttfärs"
+      },
+      {
+        "id": "6",
+        "name": "Detroit",
+        "content": "Skinka, svamp, räkor, bacon"
+      }
+    ],
+    "italianPizzas": [
+      {
+        "id": "1",
+        "name": "Pizza Mozzarella",
+        "content": "Husets tomatsås, mozzarella",
+        "price": "120"
+      },
+      {
+        "id": "2",
+        "name": "Parma Parma",
+        "content": "Husets tomatsås, mozzarella, parmaskinka,, parmesan & ruccola",
+        "price": "120"
+      },
+      {
+        "id": "3",
+        "name": "Diavola",
+        "content": "Husets tomatsås, mozzarella, stark salami, rödlök, parmesan & ruccola",
+        "price": "120"
+      },
+      {
+        "id": "4",
+        "name": "Verde",
+        "content": " Husets tomatsås, mozzarella, svamp, zuccini, sparris, aubergine, coctailtomater, parmesan & ruccola",
+        "price": "130"
+      },
+      {
+        "id": "5",
+        "name": "La Siciliana",
+        "content": "Husets tomatsås, mozzarella, sardeller, kapris, oliver, färsk vitlök",
+        "price": "130"
+      },
+      {
+        "id": "6",
+        "name": "Breasola",
+        "content": "Husets tomatsås, mozzarella, svamp, Breasola, parmesan & ruccola",
+        "price": "140"
+      },
+      {
+        "id": "7",
+        "name": "Carpaccio",
+        "content": "Husets tomatsås, Breasola, tryffelkräm, pinjenötter, balsamico, ruccola",
+        "price": "140"
+      },
+      {
+        "id": "8",
+        "name": "Pollo",
+        "content": "Husets tomatsås, mozzarella, strimlad kycklingfilé, pesto, coctailtomater, ruccola",
+        "price": "140"
+      },
+      {
+        "id": "9",
+        "name": "Frutti di Mare",
+        "content": "Husets tomatsås, mozzarella, räkor, bläckfisk, blåmusslor, färsk vitlök, ruccola",
+        "price": "140"
+      },
+      {
+        "id": "10",
+        "name": "Chevré",
+        "content": "Husets tomatsås, parmaskinka, chevré, valnötter, honung, ruccola",
+        "price": "130"
+      },
+      {
+        "id": "11",
+        "name": "Tryffel",
+        "content": "Creme fraiche, mozzarella, svamp, tryffelsalami, tryffelkräm, parmesan & ruccola",
+        "price": "130"
+      },
+      {
+        "id": "12",
+        "name": "Bianco",
+        "content": "Creme fraiche, mozzarella, chevré, valnötter, päron/fikon, honung, ruccola",
+        "price": "130"
+      }
+    ],
+    "kebabChicken": [
+      {
+        "id": "1",
+        "name": "Kebab m. bröd",
+        "content": "Nybakat bröd, kebabkött, sallad, sås"
+      },
+      {
+        "id": "2",
+        "name": "Kebabrulle",
+        "content": "Nybakat bröd, kebabkött, sallad, sås"
+      },
+      {
+        "id": "3",
+        "name": "Kebabtallrik",
+        "content": "Kebabkött, pommes, sallad, sås"
+      },
+      {
+        "id": "4",
+        "name": "Kyckling m. bröd",
+        "content": "Nybakat bröd, kyckling,sallad, sås"
+      },
+      {
+        "id": "5",
+        "name": "Kycklingrulle",
+        "content": "Nybakat bröd, kyckling, sallad, sås"
+      },
+      {
+        "id": "6",
+        "name": "Kycklingtallrik",
+        "content": "Kyckling, pommes, sallad, sås"
+      },
+      {
+        "id": "7",
+        "name": "Falafel med bröd",
+        "content": "Nybakat bröd, falafel, sallad, sås"
+      },
+      {
+        "id": "8",
+        "name": "Falafelrulle",
+        "content": "Nybakat bröd, falafel, sallad, sås"
+      },
+      {
+        "id": "9",
+        "name": "Falafeltallrik",
+        "content": "Falafel, pommes, sallad, sås"
+      },
+      {
+        "id": "10",
+        "name": "Tacorulle",
+        "content": "Tacofärs, tacochips, tacosås, majs, sås"
+      }
+    ],
+    "sallads": [
+      {
+        "id": "1",
+        "name": "Grekisk sallad",
+        "content": "Fetaost, oliver, färsk paprika, lök"
+      },
+      {
+        "id": "2",
+        "name": "Tonfisksallad",
+        "content": "Tonfisk, majs, citron, lök"
+      },
+      {
+        "id": "3",
+        "name": "Kebabsallad",
+        "content": "Kebabkött, fefferoni, lök"
+      },
+      {
+        "id": "4",
+        "name": "Kycklingsallad",
+        "content": "Kyckling, majs, ananas"
+      },
+      {
+        "id": "5",
+        "name": "Räksallad",
+        "content": "Räkor, citron, lök, majs, ägg"
+      },
+      {
+        "id": "6",
+        "name": "Skinkostsallad",
+        "content": "Skinka, ost, majs, ananas, ägg"
+      },
+      {
+        "id": "7",
+        "name": "Västkustsallad",
+        "content": " Krabba, musslor, räkor, citron, lök"
+      },
+      {
+        "id": "8",
+        "name": "Tacosallad",
+        "content": "Tacofärs, tacochips, lök, ost, majs, paprika"
+      }
+    ],
+    "bakedPotatoes": [
+      {
+        "id": "1",
+        "name": "Skinka",
+        "content": "Skinka, isbergssallad, tomat, gurka, färsk paprika"
+      },
+      {
+        "id": "2",
+        "name": "Räkor",
+        "content": "Räkor, citron, isbergssallad, tomat, gurka, färsk paprika, majs"
+      },
+      {
+        "id": "3",
+        "name": "Kyckling",
+        "content": "Kyckling, isbergsssallad, tomat, gurka, ananas, färsk paprika"
+      },
+      {
+        "id": "4",
+        "name": "Tonfisk",
+        "content": "Tonfisk, isbergssallad, tomat, gurka, citron, färsk paprika"
+      }
+    ],
+    "hamburgers": [
+      {
+        "id": "1",
+        "name": "Hamburgare m bröd",
+        "content": "Sallad, lök, dressing, tomat",
+        "90gr": "80",
+        "150gr": "90"
+      },
+      {
+        "id": "2",
+        "name": "Hamburgertallrik m pommes",
+        "content": "Sallad, lök, ost, dressing, tomat",
+        "90gr": "90",
+        "150gr": "100"
+      },
+      {
+        "id": "3",
+        "name": "Halloumiburgare",
+        "content": "",
+        "90gr": "90",
+        "150gr": "100"
+      }
+    ],
+    "pasta": [
+      {
+        "id": "1",
+        "name": "Bolognese",
+        "content": "med köttfärssås, toppad med parmesan",
+        "price": "119"
+      },
+      {
+        "id": "2",
+        "name": "Kyckling",
+        "content": "med baconsås, toppad med ost",
+        "price": "139"
+      },
+      {
+        "id": "3",
+        "name": "Fläskfilé",
+        "content": "med champinjonsås, toppad med parmesan",
+        "price": "139"
+      },
+      {
+        "id": "4",
+        "name": "Oxfilé",
+        "content": "med krämig sås, purjolök, tryffelolja, toppad med parmesan",
+        "price": "149"
+      },
+      {
+        "id": "5",
+        "name": "Skaldjur",
+        "content": "med krämig tomatsås, räkor, blåmusslor, bläckfisk, vitlök",
+        "price": "149"
+      }
+    ],
+    "plank": [
+      {
+        "id": "1",
+        "name": "Oxfilé på planka",
+        "content": "med potatismos, gorgonzolasås och wokade grönsaker",
+        "price": "259"
+      },
+      {
+        "id": "2",
+        "name": "Fläskfilé på planka",
+        "content": "med potatismos, bearnaisesås och wokade grönsaker",
+        "price": "259"
+      },
+      {
+        "id": "3",
+        "name": "Lax på planka",
+        "content": "med potatismos och vitvinssås toppad med havets läckerheter",
+        "price": "259"
+      }
+    ],
+    "meetFish": [
+      {
+        "id": "1",
+        "name": "Oxfilé",
+        "content": "Purjolöksspäckad med rödvinssås och smörslungade grönsaker",
+        "price": "259"
+      },
+      {
+        "id": "2",
+        "name": "Black & White",
+        "content": "Oxfilé, fläskfilé med bearnaisesås, rödvinssås, wokade grönsaker",
+        "price": "259"
+      },
+      {
+        "id": "3",
+        "name": "Fläskfilé Oskar",
+        "content": "med räkor, sparris, bearnaisesås, och wokade grönsaker",
+        "price": "259"
+      },
+      {
+        "id": "4",
+        "name": "Mixed grill",
+        "content": "oxfilé och fläskfilé med vitlökssås och wokade grönsaker",
+        "price": "259"
+      },
+      {
+        "id": "5",
+        "name": "Löfbiff",
+        "content": "med persiljesmör och wokade grönsaker",
+        "price": "179"
+      },
+      {
+        "id": "6",
+        "name": "Snitzel",
+        "content": "med brunsås/bearnaisesås och wokade grönsaker",
+        "price": "179"
+      },
+      {
+        "id": "7",
+        "name": "Rödspätta",
+        "content": "med grönsaker och remouladsås",
+        "price": "189"
+      },
+      {
+        "id": "8",
+        "name": "Laxkotlett",
+        "content": "med hollandaisesås toppad med räkor",
+        "price": "199"
+      }
     ]
-  },
-  "kababPizzas": [
-    {
-      "id": "1",
-      "name": "Kebabpizza kebab eller gyros, valfri sås",
-      "content": "",
-      "priceNormal": "110",
-      "priceFamily": "260"
-    },
-    {
-      "id": "2",
-      "name": "Calzone Kebab",
-      "content": "Skinka, kebab eller gyros, lök (inbakad)",
-      "priceNormal": "110",
-      "priceFamily": ""
-    },
-    {
-      "id": "3",
-      "name": "Viking pizza",
-      "content": "Kebabkött/gyros, skinka, lök, starkt kryddad, valfri sås",
-      "priceNormal": "115",
-      "priceFamily": "270"
-    },
-    {
-      "id": "4",
-      "name": "Vikingbåt",
-      "content": "Kebabkött/gyros, skinka, lök, valfri sås (halvinbakad)1",
-      "priceNormal": "115",
-      "priceFamily": ""
-    },
-    {
-      "id": "5",
-      "name": "Neptun",
-      "content": "Kebab/gyros, pommes, valfri sås",
-      "priceNormal": "115",
-      "priceFamily": "270"
-    },
-    {
-      "id": "6",
-      "name": "Kebab Special",
-      "content": "Kebab/gyros isbergssallad, tomater, gurka, lök, feferoni, valfri sås",
-      "priceNormal": "115",
-      "priceFamily": "270"
-    },
-    {
-      "id": "7",
-      "name": "Bagaren Special",
-      "content": "Kebab/gyros, champinjoner, lök, vitlöksost",
-      "priceNormal": "115",
-      "priceFamily": "270"
-    },
-    {
-      "id": "8",
-      "name": "Kebab Super",
-      "content": "Kebab/gyros, pommes isbergssallad, tomater, gurka, lök, feferoni, valfri sås",
-      "priceNormal": "120",
-      "priceFamily": "280"
-    },
-    {
-      "id": "9",
-      "name": "Mexikansk kebabpizza",
-      "content": "Svamp,lök, jalapeno, gyros, vitlök, tacosås, tacokryddmix",
-      "priceNormal": "120",
-      "priceFamily": "280"
-    }
-  ],
-  "specialPizzas": [
-    {
-      "id": "53",
-      "name": "Olofström",
-      "content": "Oxfilé, lök, färska tomater, kantareller, bearnaisesås"
-    },
-    {
-      "id": "54",
-      "name": "Grekisk pizza",
-      "content": " Oxfilé, fetaost, soltorkade tomater, oliver, ruccola, nymalen peppar"
-    },
-    {
-      "id": "55",
-      "name": "Capricciosa Super",
-      "content": "Skinka, champinjoner, räkor, oxfilé, bearnaisesås"
-    },
-    {
-      "id": "56",
-      "name": "Kyckling Special",
-      "content": "Marinerad kyckling, stekt zucchini, ruccola, färsk paprika, färska tomater"
-    },
-    {
-      "id": "57",
-      "name": "Napoli Special",
-      "content": "Skinka, champinjoner, bacon, lök, paprika, köttfärsås, tabasco, vitlök"
-    },
-    {
-      "id": "58",
-      "name": "Acapulco",
-      "content": "Oxfilé, tacokryddmix/sås, vitlök, lök, champinjoner, jalapeno"
-    }
-  ],
-
-  "plankPizzas": [
-    {
-      "id": "1",
-      "name": "Plankpizza 1",
-      "content": "Potatismos, oxfilé, lök, färsk tomat, bearnaise"
-    },
-    {
-      "id": "2",
-      "name": "Plankpizza 2",
-      "content": "Potatismos, kebabkött, lök, paprika, champinjoner, valfri sås"
-    },
-    {
-      "id": "3",
-      "name": "Plankpizza 3",
-      "content": "Oxfilé, potatismos, bacon, färsk tomat, persiljesmör med stark krydda"
-    }
-  ],
-
-  "americanPanPizzas": [
-    {
-      "id": "1",
-      "name": "Miami",
-      "content": "Skinka, svamp, tomater, ananas"
-    },
-    {
-      "id": "2",
-      "name": "Las Vegas",
-      "content": "Skinka, salami, tomater, paprika, svamp, oliver"
-    },
-    {
-      "id": "3",
-      "name": "New York",
-      "content": "Köttfärs, paprika, tomater, svamp, lök"
-    },
-    {
-      "id": "4",
-      "name": "Dallas",
-      "content": "Kebabkött, svamp, tomater, lök, feferoni, valfri sås"
-    },
-    {
-      "id": "5",
-      "name": "Arizona",
-      "content": "Skinka, svamp, paprika, salami, köttfärs"
-    },
-    {
-      "id": "6",
-      "name": "Detroit",
-      "content": "Skinka, svamp, räkor, bacon"
-    }
-  ],
-  "italianPizzas": [
-    {
-      "id": "1",
-      "name": "Pizza Mozzarella",
-      "content": "Husets tomatsås, mozzarella",
-      "price": "120"
-    },
-    {
-      "id": "2",
-      "name": "Parma Parma",
-      "content": "Husets tomatsås, mozzarella, parmaskinka,, parmesan & ruccola",
-      "price": "120"
-    },
-    {
-      "id": "3",
-      "name": "Diavola",
-      "content": "Husets tomatsås, mozzarella, stark salami, rödlök, parmesan & ruccola",
-      "price": "120"
-    },
-    {
-      "id": "4",
-      "name": "Verde",
-      "content": " Husets tomatsås, mozzarella, svamp, zuccini, sparris, aubergine, coctailtomater, parmesan & ruccola",
-      "price": "130"
-    },
-    {
-      "id": "5",
-      "name": "La Siciliana",
-      "content": "Husets tomatsås, mozzarella, sardeller, kapris, oliver, färsk vitlök",
-      "price": "130"
-    },
-    {
-      "id": "6",
-      "name": "Breasola",
-      "content": "Husets tomatsås, mozzarella, svamp, Breasola, parmesan & ruccola",
-      "price": "140"
-    },
-    {
-      "id": "7",
-      "name": "Carpaccio",
-      "content": "Husets tomatsås, Breasola, tryffelkräm, pinjenötter, balsamico, ruccola",
-      "price": "140"
-    },
-    {
-      "id": "8",
-      "name": "Pollo",
-      "content": "Husets tomatsås, mozzarella, strimlad kycklingfilé, pesto, coctailtomater, ruccola",
-      "price": "140"
-    },
-    {
-      "id": "9",
-      "name": "Frutti di Mare",
-      "content": "Husets tomatsås, mozzarella, räkor, bläckfisk, blåmusslor, färsk vitlök, ruccola",
-      "price": "140"
-    },
-    {
-      "id": "10",
-      "name": "Chevré",
-      "content": "Husets tomatsås, parmaskinka, chevré, valnötter, honung, ruccola",
-      "price": "130"
-    },
-    {
-      "id": "11",
-      "name": "Tryffel",
-      "content": "Creme fraiche, mozzarella, svamp, tryffelsalami, tryffelkräm, parmesan & ruccola",
-      "price": "130"
-    },
-    {
-      "id": "12",
-      "name": "Bianco",
-      "content": "Creme fraiche, mozzarella, chevré, valnötter, päron/fikon, honung, ruccola",
-      "price": "130"
-    }
-  ],
-  "kebabChicken": [
-    {
-      "id": "1",
-      "name": "Kebab m. bröd",
-      "content": "Nybakat bröd, kebabkött, sallad, sås"
-    },
-    {
-      "id": "2",
-      "name": "Kebabrulle",
-      "content": "Nybakat bröd, kebabkött, sallad, sås"
-    },
-    {
-      "id": "3",
-      "name": "Kebabtallrik",
-      "content": "Kebabkött, pommes, sallad, sås"
-    },
-    {
-      "id": "4",
-      "name": "Kyckling m. bröd",
-      "content": "Nybakat bröd, kyckling,sallad, sås"
-    },
-    {
-      "id": "5",
-      "name": "Kycklingrulle",
-      "content": "Nybakat bröd, kyckling, sallad, sås"
-    },
-    {
-      "id": "6",
-      "name": "Kycklingtallrik",
-      "content": "Kyckling, pommes, sallad, sås"
-    },
-    {
-      "id": "7",
-      "name": "Falafel med bröd",
-      "content": "Nybakat bröd, falafel, sallad, sås"
-    },
-    {
-      "id": "8",
-      "name": "Falafelrulle",
-      "content": "Nybakat bröd, falafel, sallad, sås"
-    },
-    {
-      "id": "9",
-      "name": "Falafeltallrik",
-      "content": "Falafel, pommes, sallad, sås"
-    },
-    {
-      "id": "10",
-      "name": "Tacorulle",
-      "content": "Tacofärs, tacochips, tacosås, majs, sås"
-    }
-  ],
-  "sallads": [
-    {
-      "id": "1",
-      "name": "Grekisk sallad",
-      "content": "Fetaost, oliver, färsk paprika, lök"
-    },
-    {
-      "id": "2",
-      "name": "Tonfisksallad",
-      "content": "Tonfisk, majs, citron, lök"
-    },
-    {
-      "id": "3",
-      "name": "Kebabsallad",
-      "content": "Kebabkött, fefferoni, lök"
-    },
-    {
-      "id": "4",
-      "name": "Kycklingsallad",
-      "content": "Kyckling, majs, ananas"
-    },
-    {
-      "id": "5",
-      "name": "Räksallad",
-      "content": "Räkor, citron, lök, majs, ägg"
-    },
-    {
-      "id": "6",
-      "name": "Skinkostsallad",
-      "content": "Skinka, ost, majs, ananas, ägg"
-    },
-    {
-      "id": "7",
-      "name": "Västkustsallad",
-      "content": " Krabba, musslor, räkor, citron, lök"
-    },
-    {
-      "id": "8",
-      "name": "Tacosallad",
-      "content": "Tacofärs, tacochips, lök, ost, majs, paprika"
-    }
-  ],
-  "bakedPotatoes": [
-    {
-      "id": "1",
-      "name": "Skinka",
-      "content": "Skinka, isbergssallad, tomat, gurka, färsk paprika"
-    },
-    {
-      "id": "2",
-      "name": "Räkor",
-      "content": "Räkor, citron, isbergssallad, tomat, gurka, färsk paprika, majs"
-    },
-    {
-      "id": "3",
-      "name": "Kyckling",
-      "content": "Kyckling, isbergsssallad, tomat, gurka, ananas, färsk paprika"
-    },
-    {
-      "id": "4",
-      "name": "Tonfisk",
-      "content": "Tonfisk, isbergssallad, tomat, gurka, citron, färsk paprika"
-    }
-  ],
-  "hamburgers": [
-    {
-      "id": "1",
-      "name": "Hamburgare m bröd",
-      "content": "Sallad, lök, dressing, tomat",
-      "90gr": "80",
-      "150gr": "90"
-    },
-    {
-      "id": "2",
-      "name": "Hamburgertallrik m pommes",
-      "content": "Sallad, lök, ost, dressing, tomat",
-      "90gr": "90",
-      "150gr": "100"
-    },
-    {
-      "id": "3",
-      "name": "Halloumiburgare",
-      "content": "",
-      "90gr": "90",
-      "150gr": "100"
-    }
-  ],
-  "pasta": [
-    {
-      "id": "1",
-      "name": "Bolognese",
-      "content": "med köttfärssås, toppad med parmesan",
-      "price": "119"
-    },
-    {
-      "id": "2",
-      "name": "Kyckling",
-      "content": "med baconsås, toppad med ost",
-      "price": "139"
-    },
-    {
-      "id": "3",
-      "name": "Fläskfilé",
-      "content": "med champinjonsås, toppad med parmesan",
-      "price": "139"
-    },
-    {
-      "id": "4",
-      "name": "Oxfilé",
-      "content": "med krämig sås, purjolök, tryffelolja, toppad med parmesan",
-      "price": "149"
-    },
-    {
-      "id": "5",
-      "name": "Skaldjur",
-      "content": "med krämig tomatsås, räkor, blåmusslor, bläckfisk, vitlök",
-      "price": "149"
-    }
-  ],
-  "plank": [
-    {
-      "id": "1",
-      "name": "Oxfilé på planka",
-      "content": "med potatismos, gorgonzolasås och wokade grönsaker",
-      "price": "259"
-    },
-    {
-      "id": "2",
-      "name": "Fläskfilé på planka",
-      "content": "med potatismos, bearnaisesås och wokade grönsaker",
-      "price": "259"
-    },
-    {
-      "id": "3",
-      "name": "Lax på planka",
-      "content": "med potatismos och vitvinssås toppad med havets läckerheter",
-      "price": "259"
-    }
-  ],
-  "meetFish": [
-    {
-      "id": "1",
-      "name": "Oxfilé",
-      "content": "Purjolöksspäckad med rödvinssås och smörslungade grönsaker",
-      "price": "259"
-    },
-    {
-      "id": "2",
-      "name": "Black & White",
-      "content": "Oxfilé, fläskfilé med bearnaisesås, rödvinssås, wokade grönsaker",
-      "price": "259"
-    },
-    {
-      "id": "3",
-      "name": "Fläskfilé Oskar",
-      "content": "med räkor, sparris, bearnaisesås, och wokade grönsaker",
-      "price": "259"
-    },
-    {
-      "id": "4",
-      "name": "Mixed grill",
-      "content": "oxfilé och fläskfilé med vitlökssås och wokade grönsaker",
-      "price": "259"
-    },
-    {
-      "id": "5",
-      "name": "Löfbiff",
-      "content": "med persiljesmör och wokade grönsaker",
-      "price": "179"
-    },
-    {
-      "id": "6",
-      "name": "Snitzel",
-      "content": "med brunsås/bearnaisesås och wokade grönsaker",
-      "price": "179"
-    },
-    {
-      "id": "7",
-      "name": "Rödspätta",
-      "content": "med grönsaker och remouladsås",
-      "price": "189"
-    },
-    {
-      "id": "8",
-      "name": "Laxkotlett",
-      "content": "med hollandaisesås toppad med räkor",
-      "price": "199"
-    }
-  ]
+  }
 }

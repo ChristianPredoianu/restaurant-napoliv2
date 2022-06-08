@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 
 export default forwardRef(function MenuPageHeadings({}, ref) {
-  console.log(ref);
   return (
     <div
       className="flex flex-col items-center justify-center pt-10 pb-24 md:mt-32 md:pb-40"
