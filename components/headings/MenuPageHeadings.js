@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 export default forwardRef(function MenuPageHeadings({}, ref) {
   return (
     <div
-      className="flex flex-col items-center justify-center pt-10 pb-24 md:mt-32 md:pb-40"
+      className="flex flex-col items-center justify-center pt-10 pb-20 md:mt-32 md:pb-40"
       ref={ref.current.headingContainerRef}
     >
       <h1
