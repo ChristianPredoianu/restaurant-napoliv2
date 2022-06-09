@@ -14,6 +14,7 @@ module.exports = {
         'hero-overlay-dark': 'rgba(0, 0, 0, .6)',
         'dark-mode-blue': '#121212',
       },
+
       dropShadow: {
         '3xl': '0 0 5px rgba(209, 114, 19, 1)',
       },
@@ -41,6 +42,7 @@ module.exports = {
         115: '35rem',
         120: '40rem',
         128: '41rem',
+        '45w': '45%',
       },
     },
   },
