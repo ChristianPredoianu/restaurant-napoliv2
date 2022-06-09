@@ -1,18 +1,16 @@
+import { forwardRef } from 'react';
 import MenuListItem from '@/components/menu-list/MenuListItem';
 
-export default function MenuList({
-  data,
-  priceRegular,
-  priceFamily,
-  category,
-}) {
-  console.log(data);
+export default forwardRef(function MenuList({ data, heading, category }, ref) {
+  console.log(ref);
+
   return (
-    <div className="flex flex-col">
-      <h3 className="text-3xl text-center mt-8 text-red-500">{category}</h3>
-      <h4 className="mt-10 text-red-500 font-bold text-xl text-center">
-        {priceRegular}
-        <span className="block">{priceFamily}</span>
+    <div className="flex flex-col" ref={ref}>
+      <h3 className="text-2xl md:text-3xl mt-10 uppercase text-center text-red-700 dark:text-amber-600">
+        {category}
+      </h3>
+      <h4 className="mt-4 text-amber-700 dark:text-gray-400 font-bold text-md md:text-xl text-center">
+        {heading}
       </h4>
 
       <ul className="mt-4">
@@ -22,4 +20,4 @@ export default function MenuList({
       </ul>
     </div>
   );
-}
+});
