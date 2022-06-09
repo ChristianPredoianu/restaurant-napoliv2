@@ -542,7 +542,7 @@
         "content": "Tacofärs, tacochips, tacosås, majs, sås"
       }
     ],
-    "sallads": [
+    "salads": [
       {
         "id": "1",
         "name": "Grekisk sallad",
@@ -611,22 +611,22 @@
         "id": "1",
         "name": "Hamburgare m bröd",
         "content": "Sallad, lök, dressing, tomat",
-        "90gr": "80",
-        "150gr": "90"
+        "small": "90gr - 80",
+        "large": "150gr - 90"
       },
       {
         "id": "2",
         "name": "Hamburgertallrik m pommes",
         "content": "Sallad, lök, ost, dressing, tomat",
-        "90gr": "90",
-        "150gr": "100"
+        "small": "90gr - 90",
+        "large": "150gr - 100"
       },
       {
         "id": "3",
         "name": "Halloumiburgare",
         "content": "",
-        "90gr": "90",
-        "150gr": "100"
+        "small": "med bröd 90",
+        "large": "med pommes 100"
       }
     ],
     "pasta": [
@@ -681,7 +681,7 @@
         "price": "259"
       }
     ],
-    "meetFish": [
+    "meatFish": [
       {
         "id": "1",
         "name": "Oxfilé",

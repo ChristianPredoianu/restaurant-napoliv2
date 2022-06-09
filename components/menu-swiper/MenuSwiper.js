@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 
 import { Autoplay, Pagination, Navigation } from 'swiper';
 
-export default forwardRef(function MenuSwiper({ props }, ref) {
+export default forwardRef(function MenuSwiper({ onScrollToSection }, ref) {
   return (
     <div className="swiper-container" ref={ref}>
       <Swiper
@@ -37,7 +37,10 @@ export default forwardRef(function MenuSwiper({ props }, ref) {
       >
         {menuSwiperContent.map((item) => (
           <SwiperSlide key={item.id}>
-            <MenuSwiperContent item={item} />
+            <MenuSwiperContent
+              item={item}
+              onScrollToSection={onScrollToSection}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

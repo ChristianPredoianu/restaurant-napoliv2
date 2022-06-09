@@ -13,7 +13,6 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Hem', path: '/' },
     { name: 'Meny', path: '/meny' },
-    { name: 'Drycker', path: '/drycker' },
     { name: 'Kontakta oss', path: '/kontakta-oss' },
     { name: 'Logga In', path: '/logga-in' },
     ,
