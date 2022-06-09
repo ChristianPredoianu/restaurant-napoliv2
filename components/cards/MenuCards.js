@@ -6,7 +6,7 @@ import GirlPizzaImg from '@/assets/images/girl-pizza.jpg';
 import data from '../../data.json';
 
 export default forwardRef(function MenuCards({}, ref) {
-  console.log(ref);
+  console.log(ref.current.pizzaRef);
 
   const menuCard1 = (
     <MenuCard
