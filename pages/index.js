@@ -1,11 +1,10 @@
 import { useRef } from 'react';
-import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
+import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import { gsap } from 'gsap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationPin, faPhone } from '@fortawesome/free-solid-svg-icons';
+import HeroSection from '@/components/HeroSection';
 import SocialMediaTab from '@/components/ui/SocialMediaTab';
-import Circle from '@/components/ui/Circle';
 import Swiper from '@/components/vertical-swiper/VerticalSwiper';
+import Circle from '@/components/ui/Circle';
 
 export default function Home() {
   const ctaContainerRef = useRef(null);
@@ -13,6 +12,7 @@ export default function Home() {
   const spanRef = useRef(null);
   const circleRef = useRef(null);
   const socialMediaTabRef = useRef(null);
+  const heroSectionRefs = { ctaContainerRef, spanRef, ctaBtnRef };
 
   const q = gsap.utils.selector(ctaContainerRef);
   const tl = gsap.timeline();
@@ -54,39 +54,7 @@ export default function Home() {
         <SocialMediaTab ref={socialMediaTabRef} />
       </div>
       <section className="min-h-screen mt-40 lg:mt-0 relative container px-8 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
-        <div className="py-4" ref={ctaContainerRef}>
-          <h1 className="hero-el text-xl lg:text-3xl font-semibold filter drop-shadow-2xl">
-            Välkommen till
-            <span className="hero-el block text-4xl lg:text-6xl py-2 font-bold">
-              Restaurang{' '}
-              <span
-                className="text-amber-500 filter drop-shadow-3xl"
-                ref={spanRef}
-              >
-                Napoli
-              </span>
-            </span>
-          </h1>
-          <div className="mt-2">
-            <div className="flex items-center text-xl lg:text-2xl">
-              <FontAwesomeIcon icon={faLocationPin} className="hero-el" />
-              <p className="hero-el ml-4">
-                Östra Storgatan 5,{' '}
-                <span className="block">293 34 Olofström</span>
-              </p>
-            </div>
-            <div className="flex items-center mt-4 text-xl lg:text-2xl">
-              <FontAwesomeIcon icon={faPhone} className="hero-el text-xl" />
-              <p className="hero-el ml-4">0454-917 01</p>
-            </div>
-          </div>
-          <button
-            className="mt-8 bg-amber-600 text-white tracking-widest uppercase py-4 px-8 rounded-sm drop-shadow-3xl"
-            ref={ctaBtnRef}
-          >
-            Vår Meny
-          </button>
-        </div>
+        <HeroSection ref={heroSectionRefs} />
         <div>
           <Swiper />
         </div>
