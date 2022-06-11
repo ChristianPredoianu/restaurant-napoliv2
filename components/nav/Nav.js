@@ -41,8 +41,8 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="absolute z-50 w-full top-0">
-        <nav className="relative flex flex-wrap items-center justify-between py-3 mb-3">
+      <header className="w-full">
+        <nav className="min-h-15vh relative flex flex-wrap items-center justify-between">
           <div className="container mx-auto flex flex-wrap items-center px-8 justify-between">
             <NavLogo />
             <DarkModeToggler />
@@ -50,13 +50,13 @@ export default function Navbar() {
               isNavbarOpen={isNavbarOpen}
               onToggleNavbar={toggleNavbarHandler}
             />
-            <div className="w-full  relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start"></div>
+            <div className="w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start"></div>
             <div
               className={`lg:flex flex-grow items-center 
              ${isNavbarOpen ? ' flex' : ' hidden'}`}
             >
               <ul
-                className="w-full absolute lg:static top-0 left-0 h-screen lg:h-auto justify-center  lg:w-auto flex flex-col items-center lg:flex-row list-none lg:ml-auto bg-amber-700 lg:bg-transparent py-10 px-2"
+                className="w-full absolute z-30 lg:static top-0 left-0 h-screen lg:h-auto justify-center  lg:w-auto flex flex-col items-center lg:flex-row list-none lg:ml-auto bg-amber-700 lg:bg-transparent py-10 px-2"
                 ref={navLinksRef}
               >
                 {navLinks.map((link) => (

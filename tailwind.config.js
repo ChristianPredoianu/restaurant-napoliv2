@@ -34,9 +34,12 @@ module.exports = {
           to: '{ border-color: green; }',
         },
       },
+      minHeight: {
+        '15vh': '15vh',
+        '85vh': '85vh',
+      },
       height: {
         128: '50rem',
-        '50vh': '50vh',
       },
       width: {
         115: '35rem',

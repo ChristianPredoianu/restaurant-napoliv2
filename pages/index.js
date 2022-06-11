@@ -53,7 +53,7 @@ export default function Home() {
       <div className="absolute top-10rem lg:top-40 right-0 z-50">
         <SocialMediaTab ref={socialMediaTabRef} />
       </div>
-      <section className="min-h-screen mt-40 lg:mt-0 relative container px-8 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
+      <section className="min-h-85vh relative container px-8 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
         <HeroSection ref={heroSectionRefs} />
         <div>
           <Swiper />

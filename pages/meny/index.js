@@ -109,7 +109,7 @@ export default function Meny() {
       <div className="absolute md:fixed top-96 lg:top-40 right-0 z-30">
         <SocialMediaTab ref={socialMediaTabRef} />
       </div>
-      <section className="pt-40 lg:mt-0 relative container px-2 md:px-8 mx-auto">
+      <section className="relative container px-2 md:px-8 mx-auto">
         <MenuPageHeadings ref={ref} />
         <div className="flex justify-center pb-20" ref={arrowDownRef}>
           <ScrollArrow arrowDirection={'down'} ref={sliderRef} />
