@@ -1,19 +1,29 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+import { useAuth } from '../../context/AuthContext';
 import SocialMediaTab from '@/components/ui/SocialMediaTab';
 
 export default function LoggaIn() {
+  const router = useRouter();
+  const { signIn } = useAuth();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log(email);
-    console.log(password);
+
+    try {
+      await signIn(email, password);
+      router.push('/inloggad');
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (
     <>
-      <div className="min-h-85vh relative flex items-center justify-center bg-red-500 overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
+      <div className="min-h-85vh relative flex items-center justify-center  overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
         <div className="fixed top-20 lg:top-40 right-0 z-50">
           <SocialMediaTab />
         </div>
@@ -37,8 +47,8 @@ export default function LoggaIn() {
               <input
                 type="password"
                 placeholder="Lösenord"
-                minlength="6"
-                maxlength="60"
+                minLength="6"
+                maxLength="60"
                 value={password}
                 required
                 className="p-2 mt-2 shadow-3xl text-black"
