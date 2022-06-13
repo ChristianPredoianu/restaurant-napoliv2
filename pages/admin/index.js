@@ -27,13 +27,14 @@ export default function Inloggad() {
 
     const db = getDatabase();
 
+    set(ref(db, 'week'), { week: state.week });
+
     set(ref(db, 'lunch/'), {
-      week: state.week,
-      monday: state.monday,
-      tuesday: state.tuesday,
-      wednesday: state.wednesday,
-      thursday: state.thursday,
-      friday: state.friday,
+      måndag: state.monday,
+      tisdag: state.tuesday,
+      onsdag: state.wednesday,
+      torsdag: state.thursday,
+      fredag: state.friday,
     });
 
     setIsFormSubmitted(true);
@@ -58,10 +59,10 @@ export default function Inloggad() {
   });
 
   return (
-    <section className="flex flex-col items-center justify-center px-4 py-10 min-h-screen">
+    <section className="flex flex-col container mx-auto  items-center justify-center px-4 py-10 min-h-screen">
       <h1 className="text-2xl">Dagens lunch</h1>
       <form
-        className="shadow-3xl py-10 px-4 flex flex-col w-full mt-10"
+        className="shadow-3xl py-10 px-4 flex flex-col w-full sm:w-4/5 md:w-3/5 lg:w-1/2 mt-10"
         onSubmit={handleSubmit}
       >
         <label htmlFor="vecka" className="tracking-widest font-bold">

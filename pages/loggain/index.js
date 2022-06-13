@@ -23,7 +23,7 @@ export default function LoggaIn() {
 
   return (
     <>
-      <div className="min-h-85vh relative flex items-center justify-center  overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
+      <div className="min-h-85vh relative flex items-center justify-center overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
         <div className="fixed top-20 lg:top-40 right-0 z-50">
           <SocialMediaTab />
         </div>

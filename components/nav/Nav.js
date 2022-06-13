@@ -43,7 +43,7 @@ export default function Navbar() {
     <>
       <header className="w-full">
         <nav className="min-h-15vh relative flex flex-wrap items-center justify-between">
-          <div className="container mx-auto flex flex-wrap items-center px-8 justify-between">
+          <div className="container mx-auto flex flex-wrap items-center px-2 md:px-8 justify-between">
             <NavLogo />
             <DarkModeToggler />
             <Hamburger
