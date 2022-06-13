@@ -15,7 +15,7 @@ export default function LoggaIn() {
 
     try {
       await signIn(email, password);
-      router.push('/inloggad');
+      router.push('/admin');
     } catch (err) {
       console.log(err);
     }
@@ -30,7 +30,7 @@ export default function LoggaIn() {
         <section className="container px-2 md:px-8 mx-auto">
           <div className="shadow-3xl py-20 px-5 sm:py-40 sm:px-20 md:mt-40 bg-amber-700 text-gray-200">
             <form className="flex flex-col" onSubmit={handleSubmit}>
-              <label for="email" className="tracking-widest">
+              <label htmlFor="email" className="tracking-widest">
                 Email:
               </label>
               <input
@@ -41,7 +41,7 @@ export default function LoggaIn() {
                 className="p-2 mt-2 shadow-3xl text-black"
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <label for="email" className="mt-4 tracking-widest">
+              <label htmlFor="email" className="mt-4 tracking-widest">
                 Lösenord:
               </label>
               <input
