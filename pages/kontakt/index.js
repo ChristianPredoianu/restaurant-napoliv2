@@ -23,12 +23,12 @@ export default function Kontakt() {
   ));
 
   return (
-    <div className="relative overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
-      <div className="fixed top-20 lg:top-40 right-0 z-50">
+    <div className="min-h-screen relative dark:bg-dark-mode-blue dark:text-gray-200">
+      <div className="hidden md:block fixed top-40 lg:top-40 right-0 z-50">
         <SocialMediaTab />
       </div>
-      <section className="min-h-screen mt-24 md:mt-0 relative container px-2 md:px-8 mx-auto flex flex-col md:flex-row md:justify-between md:items-center ">
-        <div className="w-full py-10 px-4 lg:px-16 md:w-1/2 lg:w-1/2 md:flex md:flex-col md:justify-center md:order-1 md:h-screen">
+      <section className="relative container mx-auto md:mt-10 px-2 md:px-8 flex flex-col md:flex-row md:justify-between">
+        <div className="w-full py-1 mt-8  md:flex md:flex-col md:w-2/5 md:justify-center md:order-1 ">
           <h1 className="text-3xl text-amber-600">Napoli</h1>
           <p className="mt-2 text-xl">
             Vi ordnar allt från den lilla festen till studentbjudning, företags
@@ -39,7 +39,7 @@ export default function Kontakt() {
             Välkomna önskar Napoli med personal!
           </p>
         </div>
-        <div className="relative z-10 bg-black text-gray-200 md:text-black md:bg-transparent w-full py-10 px-4 md:px-8 lg:px-16 md:w-3/5 lg:w-1/2 md:flex md:flex-col md:justify-center  md:h-screen">
+        <div className="relative z-10 mt-10 px-4 md:px-0 md:mt-0 bg-black text-gray-200 md:text-black md:bg-transparent w-full py-10 md:w-2/5 md:flex md:flex-col md:justify-center  ">
           <h2 className="text-2xl italic tracking-wider md:text-4xl">
             Öppettider
           </h2>
@@ -54,14 +54,14 @@ export default function Kontakt() {
           {openHours}
 
           <div className="flex items-center justify-between mt-4 md:text-xl">
-            <p>Ring oss på</p>
+            <p className="font-bold uppercase ">Ring oss på</p>
             <div className="flex items-center">
               <FontAwesomeIcon icon={faPhone} className="text-amber-600 mr-2" />
               <p className="font-bold">0454-917 01</p>
             </div>
           </div>
         </div>
-        <div className="flex justify-center md:absolute md:-bottom-0 md:-right-48 lg:-right-60 2xl:-right-72 w-full">
+        <div className="flex justify-center md:absolute md:-bottom-40 md:-right-48 lg:-right-72 2xl:-right-96 w-full">
           <Image
             src={PhoneImg}
             alt="girl eating pizza"

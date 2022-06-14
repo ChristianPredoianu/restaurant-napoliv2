@@ -50,10 +50,10 @@ export default function Home() {
 
   return (
     <div className="relative overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
-      <div className="absolute top-10rem lg:top-40 right-0 z-50">
+      <div className="fixed top-40 lg:top-40 right-0 z-50">
         <SocialMediaTab ref={socialMediaTabRef} />
       </div>
-      <section className="min-h-85vh relative container px-8 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
+      <section className="min-h-85vh lg:pb-20 relative container px-8 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
         <HeroSection ref={heroSectionRefs} />
         <div>
           <Swiper />

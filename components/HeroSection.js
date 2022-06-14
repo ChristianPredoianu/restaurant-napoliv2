@@ -35,7 +35,7 @@ export default forwardRef(function HeroSection({}, ref) {
 
   const ctaBtn = (
     <button
-      className="mt-8 bg-amber-600 text-white tracking-widest uppercase py-4 px-8 rounded-sm drop-shadow-3xl"
+      className="mt-8 bg-amber-600 text-white tracking-widest uppercase py-4 px-8 rounded-sm drop-shadow-3xl hover:bg-amber-700 hover:transition hover:duration-300 hover:translate-y-1"
       ref={ref.ctaBtnRef}
     >
       Vår Meny

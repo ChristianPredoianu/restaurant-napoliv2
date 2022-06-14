@@ -106,7 +106,7 @@ export default function Meny() {
 
   return (
     <div className="relative overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
-      <div className="absolute md:fixed top-96 lg:top-40 right-0 z-30">
+      <div className="fixed top-80 lg:top-40 right-0 z-30">
         <SocialMediaTab ref={socialMediaTabRef} />
       </div>
       <section className="relative container px-2 md:px-8 mx-auto">
@@ -123,13 +123,17 @@ export default function Meny() {
             onScrollToSection={scrollToSectionHandler}
           />
         </div>
-        <div className="flex justify-center mt-40">
-          <div className="text-center shadow-3xl w-full sm:w-2/3 md:w-2/5 lg:w-1/3 p-10 text-2xl text-red-700 dark:text-amber-600">
+        <div className="flex flex-col justify-center items-center md:items-stretch md:flex-row py-20">
+          <div className="flex justify-center flex-col text-center shadow-3xl mt-10 w-full sm:w-2/3 md:w-2/5 lg:w-1/3 p-10 text-2xl text-red-700 dark:text-amber-600">
             <p className="animate-pulse">Obs! Nyhet</p>
             <p className="mt-2 animate-pulse">Nutella pizza 99:-</p>
           </div>
+          <div className="text-center shadow-3xl md:ml-8 mt-10 w-full sm:w-2/3 md:w-2/5 lg:w-1/3 p-10 text-2xl text-red-700 dark:text-amber-600">
+            <p className="animate-pulse">Helgmeny</p>
+            <p className="mt-2 animate-pulse">Måndag-Fredag: 11.00-14.00</p>
+          </div>
         </div>
-        <div className="flex gap-10 flex-wrap justify-center mt-40">
+        <div className="flex gap-10 flex-wrap justify-center mt-20">
           <MenuCards ref={mealRefs} />
         </div>
       </section>

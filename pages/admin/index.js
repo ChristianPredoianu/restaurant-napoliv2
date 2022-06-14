@@ -29,12 +29,12 @@ export default function Inloggad() {
 
     set(ref(db, 'week'), { week: state.week });
 
-    set(ref(db, 'lunch/'), {
-      måndag: state.monday,
-      tisdag: state.tuesday,
-      onsdag: state.wednesday,
-      torsdag: state.thursday,
-      fredag: state.friday,
+    set(ref(db, 'days'), {
+      id1: { day: 'Måndag', lunch: state.monday },
+      id2: { day: 'Tisdag', lunch: state.tuesday },
+      id3: { day: 'Onsdag', lunch: state.wednesday },
+      id4: { day: 'Torsdag', lunch: state.thursday },
+      id5: { day: 'Fredag', lunch: state.friday },
     });
 
     setIsFormSubmitted(true);

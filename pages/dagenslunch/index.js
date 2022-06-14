@@ -7,22 +7,22 @@ import LunchList from '@/components/lunch-list/LunchList';
 
 export default function DagensLunch({ lunchData, weekData }) {
   const socialMediaTabRef = useRef(null);
-
   console.log(weekData);
 
   return (
     <>
-      <section className="relative md:flex md:items-center md:justify-between px-2 md:px-8 mt-8 md:mt-20">
-        <div className="absolute md:fixed top-96 lg:top-40 right-0 z-30">
+      <section className="container mx-auto px-2 md:px-8  relative md:flex md:items-center md:justify-between mt-8 md:mt-20">
+        <div className="fixed top-96 md:top-10rem  right-0 z-30">
           <SocialMediaTab ref={socialMediaTabRef} />
         </div>
-        <div className="container mx-auto md:w-1/2">
-          <h1 className="text-3xl md:text-5xl drop-shadow-2xl uppercase tracking-wide">
+
+        <div className="md:w-1/2">
+          <h1 className="text-3xl md:text-4xl drop-shadow-2xl uppercase tracking-wide">
             Dagens Lunch
           </h1>
           <p className="mt-4 text-xl">
             Napoli i Olofström presenterar dagens lunch för vecka:{' '}
-            <span>vecka45</span> nedan.
+            <span className="font-bold">vecka {weekData.week}</span> nedan.
           </p>
           <p className="text-xl text-amber-600 mt-1">
             Napoli med personal önskar er hjärtligt välkomna!
@@ -39,7 +39,8 @@ export default function DagensLunch({ lunchData, weekData }) {
           />
         </div>
       </section>
-      <section className="container mx-auto">
+      <section className="container mx-auto px-2 md:px-8 py-8">
+        <h2 className="mt-4 text-2xl py-4">{`Vecka: ${weekData.week}`}</h2>
         <LunchList lunchData={lunchData} />
       </section>
     </>
@@ -51,10 +52,11 @@ export function getStaticProps() {
   let weekData;
 
   const db = getDatabase();
-  const lunchRef = ref(db, 'lunch');
+  const lunchRef = ref(db, 'days');
   const weekRef = ref(db, 'week');
 
   try {
+    5;
     onValue(lunchRef, (snapshot) => {
       lunchData = snapshot.val();
     });
