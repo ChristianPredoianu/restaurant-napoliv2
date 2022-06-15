@@ -1,7 +1,6 @@
 import LunchListItem from '@/components/lunch-list/LunchListItem';
 
 export default function LunchList({ lunchData }) {
-  console.log(lunchData);
   return (
     <ul>
       {Object.entries(lunchData).map(([key, value]) => (

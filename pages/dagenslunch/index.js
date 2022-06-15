@@ -62,7 +62,10 @@ export default function DagensLunch({ lunchData, weekData }) {
             </h1>
             <p className="text-el mt-4 text-xl">
               Napoli i Olofström presenterar dagens lunch för vecka:{' '}
-              <span className="font-bold">vecka {weekData.week}</span> nedan.
+              {weekData && (
+                <span className="font-bold">vecka {weekData.week}</span>
+              )}{' '}
+              nedan.
             </p>
             <p className="text-el text-xl text-amber-600 mt-1">
               Napoli med personal önskar er hjärtligt välkomna!
@@ -86,8 +89,10 @@ export default function DagensLunch({ lunchData, weekData }) {
           className="container mx-auto px-2 mb-16 md:mb-60 md:px-8 mt-10"
           ref={lunchRef}
         >
-          <h2 className="mt-4 text-2xl py-4">{`Vecka: ${weekData.week}`}</h2>
-          <LunchList lunchData={lunchData} />
+          {weekData && (
+            <h2 className="mt-4 text-2xl py-4">{`Vecka: ${weekData.week}`}</h2>
+          )}
+          {lunchData && <LunchList lunchData={lunchData} />}
         </section>
         <Footer />
       </div>
@@ -95,7 +100,7 @@ export default function DagensLunch({ lunchData, weekData }) {
   );
 }
 
-export function getStaticProps() {
+export async function getStaticProps() {
   let lunchData;
   let weekData;
 
@@ -108,17 +113,19 @@ export function getStaticProps() {
     onValue(lunchRef, (snapshot) => {
       lunchData = snapshot.val();
     });
-
+    console.log(lunchData);
     onValue(weekRef, (snapshot) => {
       weekData = snapshot.val();
     });
+
+    console.log(lunchData);
   } catch (err) {
     console.log(err);
   }
   return {
     props: {
-      lunchData,
-      weekData,
+      lunchData: lunchData ?? null,
+      weekData: weekData ?? null,
     },
   };
 }
