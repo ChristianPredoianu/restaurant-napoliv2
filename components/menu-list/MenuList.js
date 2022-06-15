@@ -2,8 +2,6 @@ import { forwardRef } from 'react';
 import MenuListItem from '@/components/menu-list/MenuListItem';
 
 export default forwardRef(function MenuList({ data, heading, category }, ref) {
-  console.log(ref);
-
   return (
     <div className="flex flex-col" ref={ref}>
       <h3 className="text-2xl md:text-3xl mt-10 uppercase text-center text-red-700 dark:text-amber-600">

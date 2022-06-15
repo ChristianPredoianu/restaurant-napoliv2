@@ -1,7 +1,11 @@
+import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+import { getAuth, signOut } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
 
 export default function Inloggad() {
+  const router = useRouter();
+
   const [state, setState] = useState({
     week: '',
     monday: '',
@@ -52,6 +56,14 @@ export default function Inloggad() {
     });
   }
 
+  function signOutHandler() {
+    const auth = getAuth();
+
+    signOut(auth).then(() => {
+      router.push('/dagenslunch');
+    });
+  }
+
   useEffect(() => {
     const messageTimer = setTimeout(() => setIsFormSubmitted(false), 3000);
 
@@ -59,7 +71,7 @@ export default function Inloggad() {
   });
 
   return (
-    <section className="flex flex-col container mx-auto  items-center justify-center px-4 py-10 min-h-screen">
+    <section className="flex flex-col container mx-auto items-center justify-center px-4 py-10 min-h-screen">
       <h1 className="text-2xl">Dagens lunch</h1>
       <form
         className="shadow-3xl py-10 px-4 flex flex-col w-full sm:w-4/5 md:w-3/5 lg:w-1/2 mt-10"
@@ -150,6 +162,12 @@ export default function Inloggad() {
           </h2>
         )}
       </form>
+      <button
+        className="block mt-8 bg-red-500 text-gray-200 p-3 rounded-md tracking-widest uppercase hover:bg-gray-800 hover:transition hover:duration-300 hover:translate-y-1"
+        onClick={signOutHandler}
+      >
+        Logga ut
+      </button>
     </section>
   );
 }

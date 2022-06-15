@@ -13,8 +13,8 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Hem', path: '/' },
     { name: 'Meny', path: '/meny' },
-    { name: 'Kontakta oss', path: '/kontakt' },
     { name: 'Dagens Lunch', path: '/dagenslunch' },
+    { name: 'Kontakta oss', path: '/kontakt' },
     { name: 'Logga In', path: '/loggain' },
     ,
   ];

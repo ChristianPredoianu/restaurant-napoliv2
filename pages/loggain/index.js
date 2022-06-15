@@ -24,11 +24,11 @@ export default function LoggaIn() {
   return (
     <>
       <div className="min-h-85vh relative flex items-center justify-center overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
-        <div className="fixed top-20 lg:top-40 right-0 z-50">
+        <div className="hidden md:block fixed top-40 right-0 z-50">
           <SocialMediaTab />
         </div>
         <section className="container px-2 md:px-8 mx-auto">
-          <div className="shadow-3xl py-20 px-5 sm:py-40 sm:px-20 md:mt-40 bg-amber-700 text-gray-200">
+          <div className="shadow-3xl mx-auto w-4/5 md:w-3/5 lg:w-1/2 2xl:w-2/5 py-20 sm:py-40 px-5 sm:px-20 bg-amber-700 text-gray-200">
             <form className="flex flex-col" onSubmit={handleSubmit}>
               <label htmlFor="email" className="tracking-widest">
                 Email:
