@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import Head from 'next/head';
 import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
+import useAnimationSessionStorage from '@/hooks/useAnimationSessionStorage';
 import { gsap } from 'gsap';
 import HeroSection from '@/components/HeroSection';
 import SocialMediaTab from '@/components/ui/SocialMediaTab';
@@ -18,10 +19,7 @@ export default function Home() {
   const q = gsap.utils.selector(ctaContainerRef);
   const tl = gsap.timeline();
 
-  let isAnimation;
-  useIsomorphicLayoutEffect(() => {
-    isAnimation = sessionStorage.getItem('isHeroAnimated');
-  }, []);
+  const [isAnimation] = useAnimationSessionStorage('isHeroAnimated');
 
   useIsomorphicLayoutEffect(() => {
     if (!isAnimation) {
@@ -54,16 +52,16 @@ export default function Home() {
       <Head>
         <title>Restaurang Napoli | Olofström</title>
         <meta
-          name="description"
-          content="Välkommen till restaurang Napoli i Olofström på Östra Storgatan 5. Ät din dagens lunch hos oss"
+          name='description'
+          content='Välkommen till restaurang Napoli i Olofström på Östra Storgatan 5. Ät din dagens lunch hos oss'
         />
       </Head>
 
-      <div className="relative overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200">
-        <div className="fixed top-60 right-0 z-50">
+      <div className='relative overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200'>
+        <div className='fixed top-60 right-0 z-50'>
           <SocialMediaTab ref={socialMediaTabRef} />
         </div>
-        <section className="min-h-85vh lg:pb-20 relative container px-8 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center">
+        <section className='min-h-85vh lg:pb-20 relative container px-8 mx-auto flex flex-col lg:flex-row lg:justify-between lg:items-center'>
           <HeroSection ref={heroSectionRefs} />
           <div>
             <Swiper />

@@ -10,7 +10,10 @@ import { Autoplay, Pagination, Navigation } from 'swiper';
 
 export default forwardRef(function MenuSwiper({ onScrollToSection }, ref) {
   return (
-    <div className="swiper-container" ref={ref}>
+    <div className='swiper-container' ref={ref}>
+      <p className='text-center pb-8'>
+        Klicka på önskad kategori för att komma direkt till menyn
+      </p>
       <Swiper
         navigation={true}
         slidesPerView={1}
@@ -33,7 +36,7 @@ export default forwardRef(function MenuSwiper({ onScrollToSection }, ref) {
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className='mySwiper'
       >
         {menuSwiperContent.map((item) => (
           <SwiperSlide key={item.id}>
