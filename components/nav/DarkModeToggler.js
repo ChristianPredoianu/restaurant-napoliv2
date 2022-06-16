@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import useDarkMode from 'hooks/useDarkMode';
+import classNames from 'classnames';
 
 export default function DarkModeToggler() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -17,15 +18,17 @@ export default function DarkModeToggler() {
         Mörkt Läge
       </p>
       <div
-        className={`w-12 h-6 items-center rounded-full p-1 duration-300 ease-in-out cursor-pointer ${
-          isDarkMode ? 'bg-amber-600' : 'bg-black'
-        }`}
+        className={classNames(
+          'w-12 h-6 bg-black items-center rounded-full p-1 duration-300 ease-in-out cursor-pointer',
+          { 'bg-amber-600': isDarkMode }
+        )}
         onClick={toggleDarkModeHandler}
       >
         <div
-          className={`w-4 h-4 rounded-full shadow-md bg-white transform duration-300 ease-in-out ${
-            isDarkMode ? 'translate-x-6' : 'translate-x-0'
-          }`}
+          className={classNames(
+            'w-4 h-4 rounded-full shadow-md bg-white transform duration-300 ease-in-out translate-x-0',
+            { 'translate-x-6': isDarkMode }
+          )}
         ></div>
       </div>
     </div>
