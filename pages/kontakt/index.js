@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Head from 'next/head';
 import { useRef } from 'react';
 import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
@@ -86,7 +85,7 @@ export default function Kontakt() {
             </p>
           </div>
           <div
-            className="relative z-10 mt-10 px-4 md:px-0 md:mt-0 dark:text-gray-200 bg-black text-gray-200 md:text-black md:bg-transparent w-full py-10 md:w-2/5 md:flex md:flex-col md:justify-center"
+            className="z-10 mt-10 px-4 md:px-0 md:mt-0 dark:text-gray-200 bg-black text-gray-200 md:text-black md:bg-transparent w-full py-10 md:w-2/5 md:flex md:flex-col md:justify-center"
             ref={openHoursDivRef}
           >
             <h2 className="text-2xl italic tracking-wider md:text-4xl">
@@ -114,16 +113,10 @@ export default function Kontakt() {
             </div>
           </div>
           <div
-            className="flex justify-center md:absolute md:-bottom-40 md:-right-48 lg:-right-72 2xl:-right-96 w-full"
+            className="w-full flex justify-center md:w-96 md:absolute md:-bottom-60 md:right-0 xl:right-20 2xl:right-40"
             ref={hamburgerImgRef}
           >
-            <Image
-              src={HamburgerImg}
-              alt="girl eating pizza"
-              width={400}
-              height={350}
-              priority
-            />
+            <img src={HamburgerImg.src} alt="hamburger" />
           </div>
         </section>
         <Footer />

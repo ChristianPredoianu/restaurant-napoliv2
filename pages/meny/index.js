@@ -140,7 +140,7 @@ export default function Meny() {
             </div>
             <div className="text-center shadow-3xl md:ml-8 mt-10 w-full sm:w-2/3 md:w-2/5 lg:w-1/3 p-10 text-2xl text-red-700 dark:text-amber-600">
               <p className="animate-pulse">Helgmeny</p>
-              <p className="mt-2 animate-pulse">Måndag-Fredag: 11.00-14.00</p>
+              <p className="mt-2 animate-pulse">Lördag-söndag: 11.00-18.00</p>
             </div>
           </div>
           <div className="flex gap-10 flex-wrap justify-center mt-20">

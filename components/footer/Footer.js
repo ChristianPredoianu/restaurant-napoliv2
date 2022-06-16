@@ -46,6 +46,15 @@ export default function Footer() {
           />
         </a>
       </div>
+      <a
+        href="https://www.christianpredoianu.se"
+        rel="noreferrer nofollow"
+        target="_blank"
+      >
+        <p className="text-amber-600 text-center mt-10">
+          &copy; Christian Predoianu
+        </p>
+      </a>
     </footer>
   );
 }

@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import Image from 'next/image';
 import { useSwiperSlide } from 'swiper/react';
 
 export default function SwiperContent({ img }) {
   const slide = useSwiperSlide();
+  console.log(img);
 
   useEffect(() => {
     if (slide.isActive) {
@@ -16,14 +16,7 @@ export default function SwiperContent({ img }) {
 
   return (
     <div className="block w-115 md:w-120">
-      <Image
-        src={img}
-        alt="slider image"
-        width={850}
-        height={800}
-        layout="responsive"
-        priority
-      />
+      <img src={img.src} alt="slider image" />
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { forwardRef } from 'react';
-import Image from 'next/image';
 import MenuCard from '@/components/cards/MenuCard';
 import MenuList from '@/components/menu-list/MenuList';
 import GirlPizzaImg from '@/assets/images/girl-pizza.jpg';
@@ -59,14 +58,7 @@ export default forwardRef(function MenuCards({}, ref) {
         category={'Italienska Pizzor'}
       />
       <div className="block w-full mt-20 lg:mt-40">
-        <Image
-          src={GirlPizzaImg}
-          alt="girl eating pizza"
-          width={600}
-          height={850}
-          layout="responsive"
-          priority
-        />
+        <img src={GirlPizzaImg.src} alt="girl eating pizza" />
       </div>
     </MenuCard>
   );

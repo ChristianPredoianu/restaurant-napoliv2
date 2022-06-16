@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function MenuSwiperContent({ item, onScrollToSection }) {
   const { img, text } = item;
 
@@ -15,7 +13,7 @@ export default function MenuSwiperContent({ item, onScrollToSection }) {
       <div className="absolute inset-0 bg-hero-overlay z-20 flex items-center justify-center ">
         <p className="text-gray-200 text-3xl tracking-widest">{text}</p>
       </div>
-      <Image src={img} alt="food" layout="fill" objectFit="cover" priority />
+      <img src={img.src} alt="food" />
     </div>
   );
 }

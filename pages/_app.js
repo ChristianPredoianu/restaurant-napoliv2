@@ -6,6 +6,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false;
 import '../styles/globals.css';
 import '../components/vertical-swiper/VerticalSwiper.css';
+import NapoliLogo from '@/assets/images/napoli-logo.png';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -13,7 +14,18 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="keywords" content="Napoli, olofström, dagens lunch" />
-        <meta property="og:image" content="@/assets/images/napoli-logo.png" />
+        <meta property="og:image" content={NapoliLogo} key="ogimage" />
+        <meta
+          property="og:site_name"
+          content="Napoli Olofström"
+          key="ogsitename"
+        />
+        <meta
+          property="og:title"
+          content="Välkommen till restaurang Napoli i Olofström"
+          key="ogtitle"
+        />
+
         <link rel="shortcut icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
