@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { getAuth, signOut } from 'firebase/auth';
 import { getDatabase, ref, set } from 'firebase/database';
 import FormInput from '@/components/inputs/FormInput';
+import FormSubmitBtn from '@/components/buttons/FormSubmitBtn';
 
 export default function Inloggad() {
   const router = useRouter();
@@ -126,13 +127,7 @@ export default function Inloggad() {
           value={state.friday}
           onChange={handleChange}
         />
-
-        <button
-          type='submit'
-          className='block mt-8 bg-black text-gray-200 py-3 rounded-md tracking-widest uppercase hover:bg-gray-800 hover:transition hover:duration-300 hover:translate-y-1'
-        >
-          Lägg upp
-        </button>
+        <FormSubmitBtn>Lägg Upp</FormSubmitBtn>
         {isFormSubmitted && (
           <h2 className='text-xl py-8'>
             Du har lagt upp veckans lunch. Kontrollera på hemsidan så att dagens
