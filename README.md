@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 <br />
 <p align="center">
   <a href="https://github.com/ChristianPredoianu/restaurant-napoliv2/assets/images/napoli-logo.png">
-    <img src="src/assets/images/netclone.png" alt="Logo" width="200" height="160">
+    <img src="assets/images/netclone.png" alt="Logo" width="200" height="160">
   </a> 
 
   <h3 align="center">Netflix clone</h3>
