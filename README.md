@@ -56,7 +56,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A Netflix clone made with Vue 3 + Vite + Firebase to mimic Netflix functionality.
+A website made for Restaurant Napoli - Olofström - Sweden
 
 ### Built With
 
