@@ -9,17 +9,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
     <img src="assets/images/napoli-logo.png" alt="Logo" width="200" height="160">
   </a> 
 
-  <h3 align="center">Netflix clone</h3>
+  <h3 align="center">Restaurant Napoli - Olofström</h3>
    
   <p align="center">
-   Netflix Clone
+   Restaurant Napoli
     <br />
-    <a href="https://github.com/ChristianPredoianu/netflix-clone-v2"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/ChristianPredoianu/restaurant-napoliv2"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://netclonevue2.netlify.app/">View Demo</a>
+    <a href="https://napoliolofstrom.se/">View Demo</a>
     ·
-    <a href="https://github.com/ChristianPredoianu/netflix-clone-v2/issues">Report Bug</a>
+    <a href="https://github.com/ChristianPredoianu/restaurant-napoliv2/issues">Report Bug</a>
     ·  
    
   </p>
@@ -60,14 +60,13 @@ A Netflix clone made with Vue 3 + Vite + Firebase to mimic Netflix functionality
 
 ### Built With
 
-* [Vue.js 3 (script setup)](https://vuejs.org/)
-* [Vite](https://vitejs.dev/)
-* [Vuex](https://vuex.vuejs.org/)
-* [Vue Router](https://router.vuejs.org/)
+* [Next.js](https://nextjs.org/)
 * [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
-* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Sass](https://sass-lang.com/)
-* [Firebase](https://firebase.google.com/?gclid=CjwKCAjwo_KXBhAaEiwA2RZ8hI3FPK5630oR5OFUcmh5Y0_KPSDC28YPeujdLrVpk85-YyXq9Z4HLRoCE3AQAvD_BwE&gclsrc=aw.ds)
+* [Tailwind](https://tailwindcss.com/)
+* [Firebase](https://firebase.google.com/)
+* [GSAP](https://greensock.com/gsap/)
+* [Swiper.js](https://swiperjs.com/)
+* [Classnames](https://jedwatson.github.io/classnames/)
 
 
 <!-- GETTING STARTED -->
@@ -86,13 +85,13 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/ChristianPredoianu/netflix-clone-v2
+   git clone https://github.com/ChristianPredoianu/restaurant-napoliv2
    ```
 2. Install NPM packages
    ```sh
    npm install
    ``` 
-3. Serve with hot reload at localhost:1234
+3. Serve with hot reload at localhost:3000
    ```sh
     npm run dev
    ``` 
@@ -114,13 +113,7 @@ To get a local copy up and running follow these simple steps.
 
 
 
-To start using Netclone you have two options:
-
-1.1 Sign in to Netclone with an existing account for demo purposes https://netclonevue2.netlify.app/signIn:
-Username: test@test.com
-Password: testingnetclone => choose an existing profile
-
-1.2 Signup to Netclone with a dummy email made up by you. E.g (john@whatever.com) It doesn't need to be a valid email. And choose a password. => Add a profile and continue with the selected profile.
+Navigate around the website, turn on or off dark mode. Admin has the possibility to log in with credentials and update the lunches of the week section. 
 
  
 
@@ -136,15 +129,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Christian Predoianu - [@linkedin](https://se.linkedin.com/in/christian-predoianu-369218157) - christianpredoianu@yahoo.com
 
-Project Link: [https://github.com/ChristianPredoianu/netflix-clone-v2](https://github.com/ChristianPredoianu/netflix-clone-v2)
+Project Link: [https://github.com/ChristianPredoianu/netflix-clone-v2](https://github.com/ChristianPredoianu/restaurant-napoliv2)
 
 
 
 <!-- ACKNOWLEDGEMENTS --> 
 ## Acknowledgements
-* [Themoviedb](https://www.themoviedb.org/)
 * [Google Fonts](https://fonts.google.com/)
-* [Swiper.js](https://swiperjs.com/)
 * [Font-Awesome](https://fontawesome.com/)
 
 
