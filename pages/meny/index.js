@@ -129,7 +129,7 @@ export default function Meny() {
               onScrollToSection={scrollToSectionHandler}
             />
           </div>
-          <div className='flex flex-col justify-center items-center md:items-stretch md:flex-row py-20'>
+          <div className='flex flex-col justify-center items-center md:items-stretch md:flex-row md:gap-x-8 py-20'>
             <PulsingMenuCard
               content={{
                 paragraph1: 'Obs! Nyhet',
