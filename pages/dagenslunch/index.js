@@ -75,37 +75,37 @@ export default function DagensLunch() {
   } else {
     output = (
       <>
-        <section className="container mx-auto px-2 md:px-8  relative md:flex md:items-center md:justify-between pt-8 md:pt-20">
-          <div className="hidden md:block fixed top-40 right-0 z-50">
+        <section className='container mx-auto px-2 md:px-8  relative md:flex md:items-center md:justify-between pt-8 md:pt-20'>
+          <div className='hidden md:block fixed top-40 right-0 z-50'>
             <SocialMediaTab />
           </div>
 
-          <div className="md:w-1/2" ref={headingsContainerRef}>
-            <h1 className="text-el text-3xl md:text-4xl drop-shadow-2xl uppercase tracking-wide">
-              Dagens Lunch
-            </h1>
-            <p className="text-el mt-4 text-xl">
+          <div className='md:w-1/2' ref={headingsContainerRef}>
+            <div className='flex items-center gap-2 text-3xl uppercase tracking-wide xl:text-4xl drop-shadow-2xl'>
+              <h1 className='text-el'>Lunch buffe:</h1>
+              <p className='text-red-500'>115:-</p>
+            </div>
+            <p className='text-el mt-4 text-xl'>
               Napoli i Olofström presenterar dagens lunch för vecka:{' '}
-              {weekData && <span className="font-bold">{weekData.week}</span>}{' '}
-              nedan.
+              {weekData && <span className='font-bold'>{weekData.week}</span>} nedan.
             </p>
-            <p className="text-el text-xl text-amber-600 mt-1">
+            <p className='text-el text-xl text-amber-600 mt-1'>
               Napoli med personal önskar er hjärtligt välkomna!
             </p>
           </div>
           <div
-            className="md:shadow-3xl md:block w-full py-20 md:py-0 md:w-2/5"
+            className='md:shadow-3xl md:block w-full py-20 md:py-0 md:w-2/5'
             ref={imgRef}
           >
-            <img src={EatingImg.src} alt="girl eating" />
+            <img src={EatingImg.src} alt='girl eating' />
           </div>
         </section>
         <section
-          className="container mx-auto px-2 mb-16 md:mb-60 md:px-8 mt-10"
+          className='container mx-auto px-2 mb-16 md:mb-60 md:px-8 mt-10'
           ref={lunchRef}
         >
           {weekData && (
-            <h2 className="mt-4 text-2xl py-4">{`Vecka: ${weekData.week}`}</h2>
+            <h2 className='mt-4 text-2xl py-4'>{`Vecka: ${weekData.week}`}</h2>
           )}
 
           {lunchData && <LunchList lunchData={lunchData} />}
@@ -120,12 +120,12 @@ export default function DagensLunch() {
       <Head>
         <title>Restaurang Napoli | Dagens Lunch</title>
         <meta
-          name="description"
-          content="Välkommen till restaurang Napoli i Olofström. Ät din dagens lunch hos oss"
+          name='description'
+          content='Välkommen till restaurang Napoli i Olofström. Ät din dagens lunch hos oss'
         />
       </Head>
 
-      <div className="relative min-h-screen dark:bg-dark-mode-blue dark:text-gray-200">
+      <div className='relative min-h-screen dark:bg-dark-mode-blue dark:text-gray-200'>
         {output}
       </div>
     </>
