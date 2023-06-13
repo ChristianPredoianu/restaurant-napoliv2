@@ -124,16 +124,13 @@ export default function Meny() {
             <ScrollArrow arrowDirection={'down'} ref={sliderRef} />
           </div>
           <div className='md:mt-20'>
-            <MenuSwiper
-              ref={sliderRef}
-              onScrollToSection={scrollToSectionHandler}
-            />
+            <MenuSwiper ref={sliderRef} onScrollToSection={scrollToSectionHandler} />
           </div>
           <div className='flex flex-col justify-center items-center md:items-stretch md:flex-row md:gap-x-8 py-20'>
             <PulsingMenuCard
               content={{
                 paragraph1: 'Obs! Nyhet',
-                paragraph2: 'Nutella pizza 99:-',
+                paragraph2: 'Nutella pizza 110:-',
               }}
             />
             <PulsingMenuCard
