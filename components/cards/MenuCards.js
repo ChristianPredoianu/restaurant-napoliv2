@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import MenuCard from '@/components/cards/MenuCard';
 import MenuList from '@/components/menu-list/MenuList';
-import GirlPizzaImg from '@/assets/images/girl-pizza.jpg';
+/* import GirlPizzaImg from '@/assets/images/girl-pizza.jpg'; */
 import data from '../../data.json';
 
 export default forwardRef(function MenuCards({}, ref) {
@@ -47,7 +47,7 @@ export default forwardRef(function MenuCards({}, ref) {
       />
       <MenuList data={data.meals.italianPizzas} category={'Napolitanska Pizzor'} />
       <div className='block w-full mt-20 lg:mt-40'>
-        <img src={GirlPizzaImg.src} alt='girl eating pizza' />
+        <img src={'/girl-pizza.jpg'} alt='girl eating pizza' />
       </div>
     </MenuCard>
   );
