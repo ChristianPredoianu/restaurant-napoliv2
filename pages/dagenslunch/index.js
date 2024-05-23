@@ -4,7 +4,7 @@ import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import { gsap } from 'gsap';
 import { getDatabase, ref, onValue } from 'firebase/database';
 import SocialMediaTab from '@/components/ui/SocialMediaTab';
-import EatingImg from '@/assets/images/eating.jpg';
+/* import EatingImg from '@/assets/images/eating.jpg'; */
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import LunchList from '@/components/lunch-list/LunchList';
 import Footer from '@/components/footer/Footer';
@@ -83,7 +83,7 @@ export default function DagensLunch() {
           <div className='md:w-1/2' ref={headingsContainerRef}>
             <div className='flex items-center gap-2 text-3xl uppercase tracking-wide xl:text-4xl drop-shadow-2xl'>
               <h1 className='text-el'>Lunch buffe:</h1>
-              <p className='text-red-500'>115:-</p>
+              <p className='text-red-500'>120:-</p>
             </div>
             <p className='text-el mt-4 text-xl'>
               Napoli i Olofström presenterar dagens lunch för vecka:{' '}
@@ -97,7 +97,7 @@ export default function DagensLunch() {
             className='md:shadow-3xl md:block w-full py-20 md:py-0 md:w-2/5'
             ref={imgRef}
           >
-            <img src={EatingImg.src} alt='girl eating' />
+            <img src={'/eating.jpg'} alt='girl eating' />
           </div>
         </section>
         <section
