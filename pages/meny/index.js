@@ -130,7 +130,7 @@ export default function Meny() {
             <PulsingMenuCard
               content={{
                 paragraph1: 'Obs! Nyhet',
-                paragraph2: 'Nutella pizza 110:-',
+                paragraph2: 'Nutella pizza 120:-',
               }}
             />
             <PulsingMenuCard
