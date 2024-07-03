@@ -1,17 +1,30 @@
-import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import NavLogo from '@/components/nav/NavLogo';
-import GMap from '@/components/ui/GMap';
+/* import GMap from '@/components/ui/GMap'; */
+import { useMemo } from 'react';
+import dynamic from 'next/dynamic';
 
 export default function Footer() {
+  const Map = useMemo(
+    () =>
+      dynamic(() => import('@/components/ui/GMap'), {
+        loading: () => <p>Kartan laddas</p>,
+        ssr: false,
+      }),
+    []
+  );
+
   return (
     <footer className='bg-dark-mode-blue py-20 dark:border-t border-amber-600'>
       <div className='container mx-auto w-24 pb-10'>
         <NavLogo />
       </div>
-      <GMap />
+      {/*  <GMap /> */}
+      <div className='bg-white-700 mx-auto my-5 w-[90%] h-[380px]'>
+        <Map posix={[56.278145, 14.522343]} />
+      </div>
       <div className='container mx-auto border-b border-amber-600 mt-10'></div>
       <div className='text-gray-200 text-2xl container mx-auto flex justify-center items-center mt-16'>
         <a
