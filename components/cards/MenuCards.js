@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 import MenuCard from '@/components/cards/MenuCard';
 import MenuList from '@/components/menu-list/MenuList';
-/* import GirlPizzaImg from '@/assets/images/girl-pizza.jpg'; */
 import data from '../../data.json';
 
 export default forwardRef(function MenuCards({}, ref) {
@@ -9,20 +8,20 @@ export default forwardRef(function MenuCards({}, ref) {
     <MenuCard heading={'Pizzor'} subHeading={'Tomat & ost ingår på alla pizzor'}>
       <MenuList
         data={data.meals.priceclass1}
-        heading={'Prisklass 1/100:- Familjepizza 250:-'}
+        heading={'Prisklass 1/110:- Familjepizza 280:-'}
         ref={ref.current.pizzaRef}
       />
       <MenuList
         data={data.meals.priceclass2}
-        heading={'Prisklass 2/105:- Familjepizza 260:-'}
+        heading={'Prisklass 2/115:- Familjepizza 290:-'}
       />
       <MenuList
         data={data.meals.priceclass3}
-        heading={'Prisklass 3/110:- Familjepizza 270:-'}
+        heading={'Prisklass 3/125:- Familjepizza 300:-'}
       />
       <MenuList
         data={data.meals.priceclass4}
-        heading={'Prisklass 4/120:- Familjepizza 280:-'}
+        heading={'Prisklass 4/135:- Familjepizza 310:-'}
       />
     </MenuCard>
   );
@@ -32,17 +31,17 @@ export default forwardRef(function MenuCards({}, ref) {
       <MenuList data={data.meals.kebabPizzas} category={'Kebabpizzor'} />
       <MenuList
         data={data.meals.specialPizzas}
-        heading={'Pris 140:- Familjepizza 300:- Med mozzarellaost'}
+        heading={'Pris 150:- Familjepizza 330:- Med mozzarellaost'}
         category={'Specialpizzor'}
       />
       <MenuList
         data={data.meals.plankPizzas}
-        heading={'Pris 130:- Familjepizza 300:-'}
+        heading={'Pris 140:- Familjepizza 320:-'}
         category={'Plankpizzor'}
       />
       <MenuList
         data={data.meals.americanPanPizzas}
-        heading={'Small 120:- 1 pers. Medium 160:- 1-2 pers. Large 300:- 2-3 pers'}
+        heading={'Small 130:- 1 pers. Medium 160:- 1-2 pers. Large 330:- 2-3 pers'}
         category={'American Pan Pizza'}
       />
       <MenuList data={data.meals.italianPizzas} category={'Napolitanska Pizzor'} />
@@ -57,22 +56,22 @@ export default forwardRef(function MenuCards({}, ref) {
       <MenuList
         data={data.meals.kebabChicken}
         heading={'Tomat, lök och gurka ingår.'}
-        category={'Kebab, kyckling, falafel & taco 115:-'}
+        category={'Kebab, kyckling, falafel & taco 125:-'}
         ref={ref.current.kebabRef}
       />
       <MenuList
         data={data.meals.salads}
-        category={'Sallader 115:-'}
+        category={'Sallader 125:-'}
         ref={ref.current.saladRef}
       />
       <MenuList
         data={data.meals.bakedPotatoes}
-        category={'Bakad Potatis 115:-'}
+        category={'Bakad Potatis 125:-'}
         ref={ref.current.potatoesRef}
       />
       <MenuList
         data={data.meals.hamburgers}
-        category={'Hamburgare'}
+        category={'Högrevsburgare'}
         ref={ref.current.hamburgerRef}
       />
       <MenuList data={data.meals.pasta} category={'Pasta'} ref={ref.current.pastaRef} />
