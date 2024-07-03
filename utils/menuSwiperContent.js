@@ -12,7 +12,7 @@ export const menuSwiperContent = [
   { id: 1, img: '/pizza.jpg', text: 'Pizza' },
   { id: 2, img: '/hamburger.jpg', text: 'Hamburgare' },
   { id: 3, img: '/steak.jpg', text: 'Kött' },
-  { id: 4, img: '/pasta.jpg', text: 'Sallad' },
+  { id: 4, img: '/salad.jpg', text: 'Sallad' },
   { id: 5, img: '/pasta.jpg', text: 'Pasta' },
   { id: 6, img: '/kebab.jpg', text: 'Kebab' },
   { id: 7, img: '/plank.jpg', text: 'Planka' },
