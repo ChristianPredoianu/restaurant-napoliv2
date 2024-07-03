@@ -1,21 +1,32 @@
-import { useMemo } from 'react';
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+'use client';
 
-export default function GMap() {
-  const { isLoaded } = useLoadScript({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-  });
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-  if (!isLoaded) return <div>Loading...</div>;
-  return <Map />;
-}
+import 'leaflet/dist/leaflet.css';
+import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
+import 'leaflet-defaulticon-compatibility';
 
-function Map() {
-  const center = useMemo(() => ({ lat: 56.2779387, lng: 14.527581 }), []);
+const defaults = {
+  zoom: 19,
+};
+
+export default function Map(Map) {
+  const { zoom = defaults.zoom, posix } = Map;
 
   return (
-    <GoogleMap zoom={16} center={center} mapContainerClassName="map-container">
-      <Marker position={center} />
-    </GoogleMap>
+    <MapContainer
+      center={posix}
+      zoom={zoom}
+      scrollWheelZoom={false}
+      style={{ height: '100%', width: '100%' }}
+    >
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+      />
+      <Marker position={posix} draggable={false}>
+        <Popup>Restaurang Napoli, Östra Storgatan 5, Olofström.</Popup>
+      </Marker>
+    </MapContainer>
   );
 }
