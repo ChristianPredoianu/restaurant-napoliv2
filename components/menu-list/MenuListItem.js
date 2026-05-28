@@ -1,42 +1,137 @@
 export default function MenuListItem({ data }) {
-  const { id, name, content, priceFamily, priceNormal, price, small, large, xLarge } =
+  const { id, name, content, price, priceFamily, priceNormal, small, large, xLarge } =
     data;
 
+  const brandRed = '#991b1b';
+
   return (
-    <li className='flex flex-col mt-2 border-t-2 border-amber-600  py-6 first:border-t-0 last:border-b-2 dark:border-t last:border-amber-600'>
-      <div className='flex flex-col'>
-        <div className='flex items-center '>
-          <p className='text-2xl font-bold text-amber-600 '>{`${id}.`}</p>
-          <p className='font-bold text-xl md:text-2xl ml-2 '>{name}</p>
-        </div>
-        <div className='flex items-center justify-between'>
-          <p className='py-2 text-md sm:text-xl pr-4'>{content}</p>
-          {price && (
-            <p className='text-red-500 dark:text-amber-600 text-2xl'>{`${price}:-`}</p>
-          )}
-        </div>
-        {small && large && (
-          <div className='text-red-500 dark:text-amber-600 text-xl md:text-2xl'>
-            <p>{`${small} :-`}</p>
-            <p className='mt-2'>{`${large} :- `}</p>
-            {xLarge && <p className='mt-2'>{`${xLarge} :- `}</p>}
-          </div>
-        )}
-        {priceNormal && (
-          <div className='flex flex-col md:flex-row mt-2 text-xl'>
-            <p className='text-red-500 dark:text-amber-600'>
-              <span className='text-black dark:text-gray-200 mr-2 '>Vanlig:</span>
-              {`${priceNormal} :-`}
+    <li
+      className='
+        group relative
+        py-5 px-3 md:px-5
+        rounded-xl
+        transition-all duration-300
+        hover:bg-zinc-100/60 dark:hover:bg-white/5
+        border border-transparent
+        hover:border-zinc-200 dark:hover:border-white/10
+      '
+    >
+      {/* TOP ROW */}
+      <div className='flex items-start justify-between gap-4'>
+        <div className='flex items-start gap-3'>
+          {/* ID */}
+          <span
+            className='
+              text-sm md:text-base
+              font-bold
+              opacity-70
+              group-hover:opacity-100
+              transition
+            '
+            style={{ color: brandRed }}
+          >
+            {id}.
+          </span>
+
+          {/* NAME + DESCRIPTION */}
+          <div>
+            <p
+              className='
+                text-lg md:text-xl
+                font-semibold
+                text-zinc-900 dark:text-white
+                tracking-tight
+              '
+            >
+              {name}
             </p>
-            {priceFamily && (
-              <p className='md:ml-2 '>
-                Familje:
-                <span className=' md:m-2  ml-2 text-red-500 dark:text-amber-600'>{`${priceFamily} :-`}</span>
+
+            {content && (
+              <p
+                className='
+                  mt-1
+                  text-sm md:text-base
+                  text-zinc-600 dark:text-zinc-400
+                  leading-relaxed
+                '
+              >
+                {content}
               </p>
             )}
           </div>
+        </div>
+
+        {/* PRICE */}
+        {price && (
+          <div
+            className='
+              text-lg md:text-xl
+              font-bold
+              whitespace-nowrap
+              tracking-tight
+            '
+            style={{ color: brandRed }}
+          >
+            {price}:-
+          </div>
         )}
       </div>
+
+      {/* VARIANTS */}
+      {(small || large || xLarge) && (
+        <div className='mt-3 ml-10 space-y-1 text-sm md:text-base text-zinc-500 dark:text-zinc-400'>
+          {small && (
+            <p>
+              Liten:{' '}
+              <span style={{ color: brandRed }} className='font-medium'>
+                {small}:-
+              </span>
+            </p>
+          )}
+
+          {large && (
+            <p>
+              Stor:{' '}
+              <span style={{ color: brandRed }} className='font-medium'>
+                {large}:-
+              </span>
+            </p>
+          )}
+
+          {xLarge && (
+            <p>
+              Extra stor:{' '}
+              <span style={{ color: brandRed }} className='font-medium'>
+                {xLarge}:-
+              </span>
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* FAMILY PRICING */}
+      {priceNormal && (
+        <div className='mt-3 ml-10 flex flex-wrap gap-4 text-sm md:text-base text-zinc-500 dark:text-zinc-400'>
+          <p>
+            Vanlig:{' '}
+            <span style={{ color: brandRed }} className='font-medium'>
+              {priceNormal}:-
+            </span>
+          </p>
+
+          {priceFamily && (
+            <p>
+              Familj:{' '}
+              <span style={{ color: brandRed }} className='font-medium'>
+                {priceFamily}:-
+              </span>
+            </p>
+          )}
+        </div>
+      )}
+
+      {/* DIVIDER */}
+      <div className='mt-5 h-[1px] bg-gradient-to-r from-transparent via-zinc-200 dark:via-white/10 to-transparent' />
     </li>
   );
 }
