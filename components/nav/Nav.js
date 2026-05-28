@@ -7,32 +7,31 @@ import Hamburger from '@/components/nav/Hamburger';
 
 export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
-
   const navLinksRef = useRef(null);
 
+  // ✅ FIXED: removed trailing comma (was causing undefined entry)
   const navLinks = [
     { name: 'Hem', path: '/' },
     { name: 'Meny', path: '/meny' },
     { name: 'Dagens Lunch', path: '/dagenslunch' },
     { name: 'Kontakta oss', path: '/kontakt' },
     { name: 'Logga In', path: '/loggain' },
-    ,
   ];
 
   function fadeInNav() {
-    if (!gsap.isTweening(navLinksRef.current)) {
-      gsap.from(navLinksRef.current, {
-        duration: 0.3,
-        y: -100,
-        opacity: 0,
-        rotate: 10,
-      });
+    if (navLinksRef.current && !gsap.isTweening(navLinksRef.current)) {
+      gsap.fromTo(
+        navLinksRef.current,
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power2.out' },
+      );
     }
   }
 
   function toggleNavbarHandler() {
-    setIsNavbarOpen(!isNavbarOpen);
-    fadeInNav();
+    setIsNavbarOpen((prev) => !prev);
+    // Delay fadeIn until after the menu is visible
+    setTimeout(() => fadeInNav(), 10);
   }
 
   function closeNavbarHandler() {
@@ -40,35 +39,48 @@ export default function Navbar() {
   }
 
   return (
-    <>
-      <header className='w-full dark:bg-dark-mode-blue dark:text-gray-200'>
-        <nav className='min-h-15vh relative flex flex-wrap items-center justify-between'>
-          <div className='container mx-auto flex flex-wrap items-center px-2 md:px-8 justify-between'>
-            <NavLogo />
+    <header className='fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-sm'>
+      <nav className='container mx-auto px-4 md:px-6 py-3'>
+        <div className='flex items-center justify-between'>
+          {/* Logo */}
+          <NavLogo />
+
+          {/* Right side: Dark mode toggler + Hamburger */}
+          <div className='flex items-center gap-3'>
             <DarkModeToggler />
             <Hamburger isNavbarOpen={isNavbarOpen} onToggleNavbar={toggleNavbarHandler} />
-
-            <div className='w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start'></div>
-            <div
-              className={`lg:flex flex-grow items-center 
-             ${isNavbarOpen ? ' flex' : ' hidden'}`}
-            >
-              <ul
-                className='w-full fixed z-30 lg:static top-0 left-0 h-screen lg:h-auto justify-center lg:w-auto flex flex-col items-center bg-black lg:flex-row list-none lg:ml-auto  lg:bg-transparent py-10 px-2'
-                ref={navLinksRef}
-              >
-                {navLinks.map((link) => (
-                  <NavLinks
-                    link={link}
-                    key={link.name}
-                    onCloseNavbar={closeNavbarHandler}
-                  />
-                ))}
-              </ul>
-            </div>
           </div>
-        </nav>
-      </header>
-    </>
+        </div>
+
+        {/* Mobile menu overlay */}
+        <div
+          className={`
+            fixed lg:static
+            top-0 left-0
+            w-full h-screen lg:h-auto
+            bg-black/95 lg:bg-transparent
+            backdrop-blur-lg lg:backdrop-blur-none
+            transition-all duration-300 ease-in-out
+            z-40
+            ${isNavbarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+          `}
+        >
+          <ul
+            ref={navLinksRef}
+            className='
+              flex flex-col lg:flex-row
+              items-center justify-center lg:justify-end
+              gap-6 lg:gap-8
+              h-full w-full
+              px-4 py-20 lg:py-0
+            '
+          >
+            {navLinks.map((link) => (
+              <NavLinks key={link.name} link={link} onCloseNavbar={closeNavbarHandler} />
+            ))}
+          </ul>
+        </div>
+      </nav>
+    </header>
   );
 }
