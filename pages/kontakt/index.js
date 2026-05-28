@@ -1,126 +1,197 @@
 import Head from 'next/head';
-import { useRef } from 'react';
-import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
-import { gsap } from 'gsap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import HamburgerImg from '@/assets/images/hamburger3.png';
+import { useRef } from 'react';
+import useScrollReveal from '@/hooks/useScrollReveal';
 import SocialMediaTab from '@/components/ui/SocialMediaTab';
 import Footer from '@/components/footer/Footer';
+import HamburgerImg from '@/assets/images/hamburger3.png';
 
 export default function Kontakt() {
-  const headingsContainerRef = useRef(null);
-  const openHoursDivRef = useRef(null);
-  const hamburgerImgRef = useRef(null);
-
-  const q = gsap.utils.selector(headingsContainerRef);
-  const tl = gsap.timeline();
-
-  let isAnimation;
-  useIsomorphicLayoutEffect(() => {
-    isAnimation = sessionStorage.getItem('isContactAnimated');
-  }, []);
-
-  useIsomorphicLayoutEffect(() => {
-    if (!isAnimation) {
-      tl.from(q('.text-el'), { y: 100, opacity: 0, duration: 1, stagger: 0.2 });
-      tl.from(hamburgerImgRef.current, {
-        opacity: 0,
-      });
-      tl.from(openHoursDivRef.current, {
-        opacity: 0,
-        y: 100,
-        onComplete: () => {
-          sessionStorage.setItem('isContactAnimated', true);
-        },
-      });
-    }
-    return () => tl.kill();
-  }, []);
+  const sectionRef = useRef(null);
+  useScrollReveal(sectionRef);
 
   const openHoursData = [
-    { days: 'Mån-tors', summer: '11:00-22:00', winter: '11:00-21:00' },
-    { days: 'Fre-Lör', summer: '11:00-23:00', winter: '11:00-22:00' },
-    { days: 'Sön', summer: '11:00-22:00', winter: '11:00-21:00' },
+    { days: 'Mån–Tors', summer: '11:00–22:00', winter: '11:00–21:00' },
+    { days: 'Fre–Lör', summer: '11:00–23:00', winter: '11:00–22:00' },
+    { days: 'Sön', summer: '11:00–22:00', winter: '11:00–21:00' },
   ];
-
-  const openHours = openHoursData.map((openHour) => (
-    <div key={openHour.days}>
-      <p className="border-b border-amber-600 py-1 md:text-2xl">
-        {openHour.days}
-      </p>
-      <div className="flex justify-between" key={openHour.days}>
-        <p className="py-2 md:text-xl">{openHour.summer}</p>
-        <p className="py-2 md:text-xl">{openHour.winter}</p>
-      </div>
-    </div>
-  ));
 
   return (
     <>
       <Head>
-        <title>Restaurang Napoli | Kontakta oss</title>
-        <meta
-          name="description"
-          content="Välkommen till restaurang Napoli i Olofström. Kontakta oss"
-        />
+        <title>Restaurang Napoli | Kontakt</title>
       </Head>
-      <div className="min-h-screen relative dark:bg-dark-mode-blue dark:text-gray-200">
-        <div className="hidden md:block fixed top-40 lg:top-40 right-0 z-50">
-          <SocialMediaTab />
-        </div>
-        <section className="relative container mx-auto md:pt-10 mb-26 md:mb-60 px-2 md:px-8 flex flex-col md:flex-row md:justify-between">
-          <div
-            className="w-full py-1 mt-8  md:flex md:flex-col md:w-2/5 md:justify-center md:order-1"
-            ref={headingsContainerRef}
-          >
-            <h1 className="text-el text-3xl text-amber-600">Napoli</h1>
-            <p className="text-el mt-2 text-xl">
-              Vi ordnar allt från den lilla festen till studentbjudning,
-              företags eller födelsedagsfester. Kom in med dina önskemål så
-              ordnar vi resten.
+
+      {/* PREMIUM BACKGROUND LAYERS */}
+
+      {/* SOCIAL */}
+      <div className='hidden md:block fixed right-0 top-40 z-50'>
+        <SocialMediaTab />
+      </div>
+
+      <main className='container mx-auto px-4 md:px-16  pt-28 md:pt-44 pb-28 space-y-32'>
+        {/* HERO */}
+        <section className='grid lg:grid-cols-2 gap-16 items-center' ref={sectionRef}>
+          {/* TEXT */}
+          <div className='space-y-6'>
+            <p
+              className='
+                text-xs tracking-[0.35em] uppercase
+                text-zinc-500 dark:text-zinc-400
+              '
+            >
+              Kontakt & Event
             </p>
-            <p className="text-el text-xl text-amber-600 font-bold mt-2">
+
+            <h1
+              className='
+                text-5xl md:text-6xl font-extrabold leading-tight
+                text-zinc-900 dark:text-zinc-100
+              '
+            >
+              Napoli i <span className='text-red-600 dark:text-red-500'>Olofström</span>
+            </h1>
+
+            <p
+              className='
+                text-lg leading-relaxed max-w-xl
+                text-zinc-700 dark:text-zinc-300
+              '
+            >
+              Vi skapar allt från mindre middagar till större event — student, företag
+              eller födelsedag.
+            </p>
+
+            <p className='text-red-500 font-semibold text-lg'>
               Välkomna önskar Napoli med personal!
             </p>
+
+            {/* TAGS */}
+            <div className='flex flex-wrap gap-2 pt-2'>
+              {['Event', 'Catering', 'Födelsedagar', 'Företag'].map((item) => (
+                <span
+                  key={item}
+                  className='
+                      px-3 py-1 rounded-full text-sm
+                      bg-zinc-100 border border-zinc-200 text-zinc-700
+                      dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-300
+                    '
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
-          <div
-            className="z-10 mt-10 px-4 md:px-0 md:mt-0 dark:text-gray-200 bg-black text-gray-200 md:text-black md:bg-transparent w-full py-10 md:w-2/5 md:flex md:flex-col md:justify-center"
-            ref={openHoursDivRef}
-          >
-            <h2 className="text-2xl italic tracking-wider md:text-4xl">
+
+          {/* IMAGE CARD */}
+          <div className='relative'>
+            <div
+              className='
+                rounded-3xl overflow-hidden
+                border border-zinc-200 dark:border-zinc-800
+                shadow-2xl
+              '
+            >
+              <img
+                src={HamburgerImg.src}
+                alt='Hamburgare'
+                className='w-full h-[420px] object-cover'
+              />
+            </div>
+
+            {/* subtle glow */}
+            <div
+              className='
+                absolute -inset-2 rounded-3xl
+                bg-gradient-to-r from-red-500/10 to-transparent
+                blur-2xl -z-10
+              '
+            />
+          </div>
+        </section>
+
+        {/* OPEN HOURS */}
+        <section className='max-w-5xl mx-auto space-y-10'>
+          <div className='text-center space-y-2'>
+            <h2
+              className='
+                text-3xl md:text-4xl font-bold
+                text-zinc-900 dark:text-zinc-100
+              '
+            >
               Öppettider
             </h2>
-            <h3 className="mt-2 text-amber-600 md:text-md">
-              Dagarna och timmarna som vi har öppet
-            </h3>
+            <p className='text-zinc-500 dark:text-zinc-400'>
+              Sommar & vintertider beroende på säsong
+            </p>
+          </div>
 
-            <div className="flex justify-between py-2 text-xl">
-              <p>Sommar</p>
-              <p>Vinter</p>
-            </div>
-            {openHours}
+          <div className='grid md:grid-cols-3 gap-5'>
+            {openHoursData.map((item) => (
+              <div
+                key={item.days}
+                className='
+                    group rounded-2xl p-6 space-y-4
+                    bg-white border border-zinc-200
+                    dark:bg-zinc-900/60 dark:border-zinc-800
 
-            <div className="flex items-center justify-between mt-4 md:text-xl">
-              <p className="font-bold uppercase ">Ring oss på</p>
-              <div className="flex items-center">
-                <FontAwesomeIcon
-                  icon={faPhone}
-                  className="text-amber-600 mr-2"
-                />
-                <p className="font-bold">0454-917 01</p>
+                    hover:border-red-500/40
+                    transition-all duration-300
+                  '
+              >
+                <h3
+                  className='
+                    text-lg font-semibold
+                    text-zinc-900 dark:text-zinc-100
+                  '
+                >
+                  {item.days}
+                </h3>
+
+                <div className='space-y-2 text-sm'>
+                  <div className='flex justify-between text-zinc-500 dark:text-zinc-400'>
+                    <span>Sommar</span>
+                    <span className='text-zinc-800 dark:text-zinc-200'>
+                      {item.summer}
+                    </span>
+                  </div>
+
+                  <div className='flex justify-between text-zinc-500 dark:text-zinc-400'>
+                    <span>Vinter</span>
+                    <span className='text-zinc-800 dark:text-zinc-200'>
+                      {item.winter}
+                    </span>
+                  </div>
+                </div>
+
+                <div className='h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent' />
+              </div>
+            ))}
+          </div>
+
+          {/* PHONE CTA */}
+          <div className='flex justify-center pt-6'>
+            <div
+              className='
+                flex items-center gap-4 px-6 py-4 rounded-2xl
+                bg-white border border-zinc-200
+                dark:bg-zinc-900 dark:border-zinc-800
+                shadow-md
+              '
+            >
+              <span className='text-zinc-500 dark:text-zinc-400'>Ring oss</span>
+
+              <div className='flex items-center gap-2 text-red-500 font-bold text-lg'>
+                <FontAwesomeIcon icon={faPhone} />
+                0454-917 01
               </div>
             </div>
           </div>
-          <div
-            className="w-full flex justify-center md:w-96 md:absolute md:-bottom-60 md:right-0 xl:right-20 2xl:right-40"
-            ref={hamburgerImgRef}
-          >
-            <img src={HamburgerImg.src} alt="hamburger" />
-          </div>
         </section>
-        <Footer />
-      </div>
+      </main>
+
+      <Footer />
     </>
   );
 }
