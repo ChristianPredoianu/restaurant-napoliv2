@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { gsap } from 'gsap';
 import useIsomorphicLayoutEffect from '@/hooks/useIsomorphicLayoutEffect';
 import useScrollToSection from '@/hooks/useScrollToSection';
+import useScrollReveal from '@/hooks/useScrollReveal';
 import useAnimationSessionStorage from '@/hooks/useAnimationSessionStorage';
 import MenuPageHeadings from '@/components/headings/MenuPageHeadings';
 import ScrollArrow from '@/components/ui/ScrollArrow';
@@ -37,6 +38,9 @@ export default function Meny() {
     plankRef,
     potatoesRef,
   });
+
+  const sectionRef = useRef(null);
+  useScrollReveal(sectionRef);
 
   let q = gsap.utils.selector(headingContainerRef);
   const tl = gsap.timeline();
@@ -114,11 +118,11 @@ export default function Meny() {
           content='Välkommen till restaurang Napoli i Olofström. Meny'
         />
       </Head>
-      <div className='relative overflow-hidden dark:bg-dark-mode-blue dark:text-gray-200'>
+      <div className='relative py-10 overflow-hidden container mx-auto px-4 md:px-16'>
         <div className='hidden md:block fixed top-40 right-0 z-50'>
           <SocialMediaTab ref={socialMediaTabRef} />
         </div>
-        <section className='relative container pb-20 px-2 md:px-8 mx-auto'>
+        <section className='relative pb-20 ' ref={sectionRef}>
           <MenuPageHeadings ref={ref} />
           <div className='flex justify-center pb-20' ref={arrowDownRef}>
             <ScrollArrow arrowDirection={'down'} ref={sliderRef} />
@@ -144,8 +148,8 @@ export default function Meny() {
             <MenuCards ref={mealRefs} />
           </div>
         </section>
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
