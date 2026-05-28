@@ -1,43 +1,52 @@
-.swiper-container {
-  height: 25rem;
+/* NAVIGATION BUTTONS */
+.menuSwiper .swiper-button-prev,
+.menuSwiper .swiper-button-next {
+  width: 52px;
+  height: 52px;
+  border-radius: 9999px;
+  background: rgba(24, 24, 27, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s ease;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
+/* arrows */
+.menuSwiper .swiper-button-prev::after,
+.menuSwiper .swiper-button-next::after {
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* hover */
+.menuSwiper .swiper-button-prev:hover,
+.menuSwiper .swiper-button-next:hover {
+  background: rgba(153, 27, 27, 0.95);
+  transform: scale(1.05);
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* DISABLED STATE */
+.menuSwiper .swiper-button-disabled {
+  opacity: 0.35 !important;
+
+  /* IMPORTANT FIX */
+  pointer-events: auto !important;
 }
 
-.swiper-pagination-vertical.swiper-pagination-bullets,
-.swiper-vertical > .swiper-pagination-bullets {
-  right: 30px !important;
+/* prevent slide clicks through disabled buttons */
+.menuSwiper .swiper-button-prev,
+.menuSwiper .swiper-button-next {
+  z-index: 30;
 }
 
-.swiper-button-next {
-  color: #eb9800 !important;
-}
-
-.swiper-button-prev {
-  color: #eb9800 !important;
-}
-
+/* Swiper pagination bullets */
 .swiper-pagination-bullet {
-  background-color: #eb9800 !important;
+  background: #6b7280 !important; /* gray-500 */
+  opacity: 0.5;
+}
+
+/* active bullet */
+.swiper-pagination-bullet-active {
+  background: #9ca3af !important; /* gray-400 */
+  opacity: 1;
 }
