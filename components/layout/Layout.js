@@ -6,9 +6,10 @@ export default function Layout({ children }) {
     <div className='relative min-h-screen text-zinc-900  dark:bg-dark-mode-blue dark:text-gray-200'>
       <Nav />
 
-      <main className=' relative z-10 '>
+      <main className='relative z-10 pt-24'>
         <div className=''>{children}</div>
       </main>
+
       <ScrollToTop />
     </div>
   );
