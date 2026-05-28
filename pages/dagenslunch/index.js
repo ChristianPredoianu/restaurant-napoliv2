@@ -126,7 +126,7 @@ export default function DagensLunch() {
                   text-sm text-zinc-700 dark:text-zinc-300
                 '
                 >
-                  🍽️ Uppdateras dagligen
+                  🍽️ Uppdateras veckovis
                 </div>
               </div>
             </div>
