@@ -46,10 +46,7 @@ export default function Navbar() {
           <div className='container mx-auto flex flex-wrap items-center px-2 md:px-8 justify-between'>
             <NavLogo />
             <DarkModeToggler />
-            <Hamburger
-              isNavbarOpen={isNavbarOpen}
-              onToggleNavbar={toggleNavbarHandler}
-            />
+            <Hamburger isNavbarOpen={isNavbarOpen} onToggleNavbar={toggleNavbarHandler} />
 
             <div className='w-full relative flex justify-between items-center lg:w-auto lg:static lg:block lg:justify-start'></div>
             <div
@@ -57,7 +54,7 @@ export default function Navbar() {
              ${isNavbarOpen ? ' flex' : ' hidden'}`}
             >
               <ul
-                className='w-full fixed z-30 lg:static top-0 left-0 h-screen lg:h-auto justify-center lg:w-auto flex flex-col items-center lg:flex-row list-none lg:ml-auto bg-amber-700 lg:bg-transparent py-10 px-2'
+                className='w-full fixed z-30 lg:static top-0 left-0 h-screen lg:h-auto justify-center lg:w-auto flex flex-col items-center bg-black lg:flex-row list-none lg:ml-auto  lg:bg-transparent py-10 px-2'
                 ref={navLinksRef}
               >
                 {navLinks.map((link) => (
