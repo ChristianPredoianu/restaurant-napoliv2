@@ -65,19 +65,20 @@
         "id": "13",
         "name": "Africana",
         "content": "Banan, ananas, curry"
+      },
+      {
+        "id": "14",
+        "name": "Quattro Formaggi",
+        "content": "Fårost, mozarella, gorgonzola, riddarost"
       }
     ],
     "priceclass2": [
       {
-        "id": "14",
+        "id": "15",
         "name": "Naxos",
         "content": "Skinka, köttfärsås, paprika, tabasco"
       },
-      {
-        "id": "15",
-        "name": "Sicilia",
-        "content": "Skinka, champinjoner, köttfärsås"
-      },
+
       {
         "id": "16",
         "name": "Primavera",
@@ -159,111 +160,106 @@
 
       {
         "id": "31",
-        "name": "Quattro Formaggi",
-        "content": "Fårost, mozarella, gorgonzola, riddarost"
-      },
-      {
-        "id": "32",
         "name": "Havets Special",
         "content": "Räkor, tonfisk, krabba, musslor"
       },
       {
-        "id": "33",
+        "id": "32",
         "name": "Venedig",
         "content": "Kyckling, ananas, banan, jordnötter, curry"
       },
       {
-        "id": "34",
+        "id": "33",
         "name": "Ciao, Ciao",
         "content": "Champinjoner, fläskfilé/oxfilé, vitlök, bearnaisesås (halvinbakad)"
       },
       {
-        "id": "35",
+        "id": "34",
         "name": "Gorgonzola",
         "content": "Lök, oxfilé, gorgonzola"
       },
       {
-        "id": "36",
+        "id": "35",
         "name": "Volvospecial",
         "content": "Oxfilé, fläskfilé, jalapeno, bearnaisesås"
       },
       {
-        "id": "37",
+        "id": "36",
         "name": "OIBK",
         "content": "Fläskfilé, sparris, bearnaisesås"
       },
       {
-        "id": "38",
+        "id": "37",
         "name": "Steelers",
         "content": "Fläskfilé, champinjoner, gorgonzola, sparris"
       },
       {
-        "id": "39",
+        "id": "38",
         "name": "Mozart",
         "content": "Oxfilé, lök, champinjoner, bearnaisesås"
       },
       {
-        "id": "40",
+        "id": "39",
         "name": "Roma",
         "content": "Skinka, bacon, champinjoner, lök, köttfärsås"
       },
       {
-        "id": "41",
+        "id": "40",
         "name": "Romeo",
         "content": "Skinka, oxfile, bearnaisesås"
       },
       {
-        "id": "42",
+        "id": "41",
         "name": "Kycklingpizza",
         "content": "Kyckling, färsk tomat, curry"
       },
       {
-        "id": "43",
+        "id": "42",
         "name": "Mama Mia",
         "content": "Skinka, bacon, räkor, champinjoner, lök"
       },
       {
-        "id": "44",
+        "id": "43",
         "name": "Triangeln",
         "content": "Oxfilé, skinka, gyros/kebab, kebabsås, bearnaisesås"
       },
       {
-        "id": "45",
+        "id": "44",
         "name": "Broscheet",
         "content": "Oxfilé, lök, champinjoner, paprika, tomater, bearnaiseså (halvinbakad)"
       },
       {
-        "id": "46",
+        "id": "45",
         "name": "Mexicana",
         "content": "Köttfärsås, tacokryddmix/sås, vitlök, lök, champinjoner"
       },
       {
-        "id": "47",
+        "id": "46",
         "name": "Quatro Stagioni",
         "content": "Skinka, champinjoner, räkor, musslor, kronärtskocka"
       },
       {
-        "id": "48",
+        "id": "47",
         "name": "Gudfadern",
         "content": "Skinka, tonfisk, kapris, paprika, cayennepeppar"
       },
       {
-        "id": "49",
+        "id": "48",
         "name": "Disco",
         "content": "Skinka, champinjoner, räkor, (dubbelinbakad)"
       },
       {
-        "id": "50",
+        "id": "49",
         "name": "Tefat",
         "content": "Skinka, köttfärsås, paprika, vitlök, (dubbelinbakad)"
       },
       {
-        "id": "51",
+        "id": "50",
         "name": "Blekinge",
         "content": "Skinka, kyckling, ananas, jordnötter, curry"
       },
       {
-        "id": "52",
+        "id": "51",
         "name": "Oredslund Special",
         "content": "Skinka, salami, bacon, vitlöksost"
       }
@@ -710,24 +706,30 @@
       },
       {
         "id": "5",
+        "name": "Entrecote",
+        "content": "entrecote med wokade grönsaker och rödvinssås",
+        "price": "289"
+      },
+      {
+        "id": "6",
         "name": "Löfbiff",
         "content": "med persiljesmör och wokade grönsaker",
         "price": "239"
       },
       {
-        "id": "6",
+        "id": "7",
         "name": "Snitzel",
         "content": "med brunsås/bearnaisesås och wokade grönsaker",
         "price": "249"
       },
       {
-        "id": "7",
+        "id": "8",
         "name": "Rödspätta",
         "content": "med grönsaker och remouladsås",
         "price": "249"
       },
       {
-        "id": "8",
+        "id": "9",
         "name": "Laxkotlett",
         "content": "med hollandaisesås toppad med räkor",
         "price": "259"
