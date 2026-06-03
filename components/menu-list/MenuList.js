@@ -34,7 +34,7 @@ export default forwardRef(function MenuList({ data, heading, category }, ref) {
           mt-3
           text-sm md:text-lg
           text-center
-          text-zinc-500 dark:text-zinc-400
+          text-red-900
           font-medium
         '
       >
