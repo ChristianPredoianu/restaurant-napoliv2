@@ -27,25 +27,11 @@ export default function DarkModeToggler() {
         aria-checked={isDarkMode}
         role='switch'
         aria-label='Växla mörkt läge'
-        className='
-          relative w-14 h-8
-          flex items-center
-          rounded-full p-1 cursor-pointer
-          outline-none transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
-          bg-zinc-900 text-white border-2 border-zinc-800
-          dark:bg-black dark:text-white dark:border-zinc-700
-          hover:scale-105 active:scale-95
-          focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black
-          shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]
-        '
+        className='relative w-14 h-8 flex items-center rounded-full p-1 cursor-pointer outline-none transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] bg-zinc-900 text-white border-2 border-zinc-800 dark:bg-black dark:text-white dark:border-zinc-700 hover:scale-105 active:scale-95 focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-black shadow-[inset_0_2px_4px_rgba(0,0,0,0.6)]'
       >
         {/* The Morphing Canvas Indicator */}
         <div
-          className={`
-            w-5 h-5 rounded-full relative
-            transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]
-            ${isDarkMode ? 'translate-x-6 bg-transparent' : 'bg-white'}
-          `}
+          className={`w-5 h-5 rounded-full relative transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isDarkMode ? 'translate-x-6 bg-transparent' : 'bg-white'}`}
           style={{
             // When light mode: standard circle sun. When dark mode: drops a shadow mask to create a perfect moon crescent
             boxShadow: isDarkMode
@@ -55,10 +41,7 @@ export default function DarkModeToggler() {
         >
           {/* Sun Rays (Only visible, scaling out, and rotating when in Light Mode) */}
           <div
-            className={`
-              absolute inset-0 w-full h-full transition-all duration-500 ease-out
-              ${isDarkMode ? 'opacity-0 scale-0 rotate-90' : 'opacity-100 scale-100 rotate-0'}
-            `}
+            className={`absolute inset-0 w-full h-full transition-all duration-500 ease-out ${isDarkMode ? 'opacity-0 scale-0 rotate-90' : 'opacity-100 scale-100 rotate-0'}`}
           >
             {[...Array(6)].map((_, i) => (
               <span
