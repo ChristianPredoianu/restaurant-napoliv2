@@ -6,38 +6,14 @@ export default forwardRef(function MenuList({ data, heading, category }, ref) {
   const items = Array.isArray(data) ? data : Object.values(data || {}).flat();
 
   return (
-    <div
-      ref={ref}
-      className='
-        w-full
-        flex flex-col
-        py-10
-      '
-    >
+    <div ref={ref} className='w-full flex flex-col py-10'>
       {/* CATEGORY TITLE */}
-      <h3
-        className='
-          text-3xl md:text-4xl
-          font-black
-          uppercase
-          text-center
-          tracking-widest
-          text-zinc-900 dark:text-red-900
-        '
-      >
+      <h3 className='text-3xl md:text-4xl font-black uppercase text-center tracking-widest text-zinc-900 dark:text-red-900'>
         {category}
       </h3>
 
       {/* SUBTITLE */}
-      <h4
-        className='
-          mt-3
-          text-sm md:text-lg
-          text-center
-          text-red-900
-          font-medium
-        '
-      >
+      <h4 className='mt-3 text-sm md:text-lg text-center text-red-900 font-medium'>
         {heading}
       </h4>
 

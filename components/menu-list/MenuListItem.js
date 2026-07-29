@@ -5,29 +5,13 @@ export default function MenuListItem({ data }) {
   const brandRed = '#991b1b';
 
   return (
-    <li
-      className='
-        group relative
-        py-5 px-3 md:px-5
-        rounded-xl
-        transition-all duration-300
-        hover:bg-zinc-100/60 dark:hover:bg-white/5
-        border border-transparent
-        hover:border-zinc-200 dark:hover:border-white/10
-      '
-    >
+    <li className='group relative py-5 px-3 md:px-5 rounded-xl transition-all duration-300 hover:bg-zinc-100/60 dark:hover:bg-white/5 border border-transparent hover:border-zinc-200 dark:hover:border-white/10'>
       {/* TOP ROW */}
       <div className='flex items-start justify-between gap-4'>
         <div className='flex items-start gap-3'>
           {/* ID */}
           <span
-            className='
-              text-sm md:text-base
-              font-bold
-              opacity-70
-              group-hover:opacity-100
-              transition
-            '
+            className='text-sm md:text-base font-bold opacity-70 group-hover:opacity-100 transition'
             style={{ color: brandRed }}
           >
             {id}.
@@ -35,26 +19,12 @@ export default function MenuListItem({ data }) {
 
           {/* NAME + DESCRIPTION */}
           <div>
-            <p
-              className='
-                text-lg md:text-xl
-                font-semibold
-                text-zinc-900 dark:text-white
-                tracking-tight
-              '
-            >
+            <p className='text-lg md:text-xl font-semibold text-zinc-900 dark:text-white tracking-tight'>
               {name}
             </p>
 
             {content && (
-              <p
-                className='
-                  mt-1
-                  text-sm md:text-base
-                  text-zinc-600 dark:text-zinc-400
-                  leading-relaxed
-                '
-              >
+              <p className='mt-1 text-sm md:text-base text-zinc-600 dark:text-zinc-400 leading-relaxed'>
                 {content}
               </p>
             )}
@@ -64,12 +34,7 @@ export default function MenuListItem({ data }) {
         {/* PRICE */}
         {price && (
           <div
-            className='
-              text-lg md:text-xl
-              font-bold
-              whitespace-nowrap
-              tracking-tight
-            '
+            className='text-lg md:text-xl font-bold whitespace-nowrap tracking-tight'
             style={{ color: brandRed }}
           >
             {price}:-
