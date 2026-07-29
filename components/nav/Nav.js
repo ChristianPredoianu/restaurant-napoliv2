@@ -9,7 +9,6 @@ export default function Navbar() {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const navLinksRef = useRef(null);
 
-  // ✅ FIXED: removed trailing comma (was causing undefined entry)
   const navLinks = [
     { name: 'Hem', path: '/' },
     { name: 'Meny', path: '/meny' },
@@ -54,26 +53,11 @@ export default function Navbar() {
 
         {/* Mobile menu overlay */}
         <div
-          className={`
-            fixed lg:static
-            top-0 left-0
-            w-full h-screen lg:h-auto
-            bg-black/95 lg:bg-transparent
-            backdrop-blur-lg lg:backdrop-blur-none
-            transition-all duration-300 ease-in-out
-            z-40
-            ${isNavbarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-          `}
+          className={`fixed lg:static top-0 left-0 w-full h-screen lg:h-auto bg-black/95 lg:bg-transparent backdrop-blur-lg lg:backdrop-blur-none transition-all duration-300 ease-in-out z-40 ${isNavbarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}
         >
           <ul
             ref={navLinksRef}
-            className='
-              flex flex-col lg:flex-row
-              items-center justify-center lg:justify-end
-              gap-6 lg:gap-8
-              h-full w-full
-              px-4 py-20 lg:py-0
-            '
+            className='flex flex-col lg:flex-row items-center justify-center lg:justify-end gap-6 lg:gap-8 h-full w-full px-4 py-20 lg:py-0'
           >
             {navLinks.map((link) => (
               <NavLinks key={link.name} link={link} onCloseNavbar={closeNavbarHandler} />

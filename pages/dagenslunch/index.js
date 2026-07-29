@@ -38,7 +38,7 @@ export default function DagensLunch() {
 
   if (isLoading) {
     return (
-      <div className='min-h-screen flex items-center justify-center  dark:bg-black'>
+      <div className='min-h-screen flex items-center justify-center dark:bg-black'>
         <LoadingSpinner />
       </div>
     );
@@ -50,7 +50,7 @@ export default function DagensLunch() {
         <title>Restaurang Napoli | Dagens Lunch</title>
       </Head>
 
-      <div className='min-h-screen py-10  '>
+      <div className='min-h-screen py-10'>
         <div className='hidden md:block fixed top-40 right-0 z-50'>
           <SocialMediaTab />
         </div>
@@ -60,7 +60,7 @@ export default function DagensLunch() {
           ref={sectionRef}
         >
           {/* soft glow background for dark mode */}
-          <div className=' py-16 relative'>
+          <div className='py-16 relative'>
             <div className='grid md:grid-cols-2 gap-10 items-center'>
               {/* TEXT */}
               <div>
@@ -85,13 +85,7 @@ export default function DagensLunch() {
                   {['🥗 Sallad', '🥖 Bröd', '☕ Kaffe', '🧃 Dryck'].map((item) => (
                     <span
                       key={item}
-                      className='
-                        px-3 py-1 rounded-full
-                        bg-white/70 dark:bg-white/5
-                        border border-zinc-200/60 dark:border-white/10
-                        backdrop-blur
-                        text-zinc-700 dark:text-zinc-300
-                      '
+                      className='px-3 py-1 rounded-full bg-white/70 dark:bg-white/5 border border-zinc-200/60 dark:border-white/10 backdrop-blur text-zinc-700 dark:text-zinc-300'
                     >
                       {item}
                     </span>
@@ -101,13 +95,7 @@ export default function DagensLunch() {
 
               {/* IMAGE */}
               <div className='relative'>
-                <div
-                  className='
-                  rounded-2xl overflow-hidden
-                  border border-zinc-200/60 dark:border-white/10
-                  shadow-lg dark:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]
-                '
-                >
+                <div className='rounded-2xl overflow-hidden border border-zinc-200/60 dark:border-white/10 shadow-lg dark:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]'>
                   <img
                     src='/eating.jpg'
                     alt='Lunch'
@@ -116,16 +104,7 @@ export default function DagensLunch() {
                 </div>
 
                 {/* badge */}
-                <div
-                  className='
-                  absolute -bottom-4 left-4
-                  px-4 py-2 rounded-xl
-                  bg-white dark:bg-zinc-900
-                  border border-zinc-200/60 dark:border-white/10
-                  shadow-md
-                  text-sm text-zinc-700 dark:text-zinc-300
-                '
-                >
+                <div className='absolute -bottom-4 left-4 px-4 py-2 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-white/10 shadow-md text-sm text-zinc-700 dark:text-zinc-300'>
                   🍽️ Uppdateras veckovis
                 </div>
               </div>
@@ -140,16 +119,7 @@ export default function DagensLunch() {
             <p className='text-zinc-500 dark:text-zinc-400 mt-1'>Serveras 11:00–14:00</p>
           </div>
 
-          <div
-            className='
-            rounded-2xl
-            border border-zinc-200/60 dark:border-white/10
-            dark:bg-zinc-950/60
-            backdrop-blur
-            p-4 md:p-6
-            shadow-sm dark:shadow-[0_10px_50px_-20px_rgba(0,0,0,0.8)]
-          '
-          >
+          <div className='rounded-2xl border border-zinc-200/60 dark:border-white/10 dark:bg-zinc-950/60 backdrop-blur p-4 md:p-6 shadow-sm dark:shadow-[0_10px_50px_-20px_rgba(0,0,0,0.8)]'>
             {lunchData && <LunchList lunchData={lunchData} />}
           </div>
         </main>

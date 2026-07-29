@@ -9,14 +9,7 @@ export default forwardRef(function HeroSection(_, ref) {
   return (
     <section className='relative overflow-hidden py-20 lg:py-32'>
       {/* Background Image */}
-      <div
-        className="
-          absolute inset-0
-          bg-[url('/images/restaurant-bg.jpg')]
-          bg-cover bg-center
-          scale-110
-        "
-      />
+      <div className="absolute inset-0 bg-[url('/images/restaurant-bg.jpg')] bg-cover bg-center scale-110" />
 
       {/* Overlay */}
       <div className='absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/90' />
@@ -31,15 +24,7 @@ export default forwardRef(function HeroSection(_, ref) {
       <div className='relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
         <div
           ref={ref?.ctaContainerRef}
-          className='
-            max-w-2xl
-            rounded-3xl
-            border border-white/10
-            bg-white/5
-            backdrop-blur-2xl
-            p-8 sm:p-10 lg:p-14
-            shadow-[0_20px_80px_rgba(0,0,0,0.6)]
-          '
+          className='max-w-2xl rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 sm:p-10 lg:p-14 shadow-[0_20px_80px_rgba(0,0,0,0.6)]'
         >
           {/* Label */}
           <p className='hero-el uppercase tracking-[0.35em] text-xs sm:text-sm text-zinc-300'>
@@ -47,16 +32,7 @@ export default forwardRef(function HeroSection(_, ref) {
           </p>
 
           {/* Title */}
-          <h1
-            className='
-              hero-el
-              mt-4
-              text-4xl sm:text-5xl lg:text-5xl
-              font-extrabold
-              leading-[1.05]
-              text-white
-            '
-          >
+          <h1 className='hero-el mt-4 text-4xl sm:text-5xl lg:text-5xl font-extrabold leading-[1.05] text-white'>
             Restaurang{' '}
             <span
               ref={ref?.spanRef}
@@ -99,20 +75,12 @@ export default forwardRef(function HeroSection(_, ref) {
           </div>
 
           {/* CTA */}
-          <div className='mt-10 text-white  tracking-wide'>
+          <div className='mt-10 text-white tracking-wide'>
             <Link
               href='/meny'
               ref={ref?.ctaBtnRef}
               style={{ backgroundColor: brandRed }}
-              className='
-                inline-flex items-center justify-center
-                rounded-2xl
-                px-8 py-4
-                shadow-lg
-                transition-all duration-300
-                hover:-translate-y-1
-                hover:scale-[1.02]
-              '
+              className='inline-flex items-center justify-center rounded-2xl px-8 py-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02]'
             >
               Se Menyn
             </Link>

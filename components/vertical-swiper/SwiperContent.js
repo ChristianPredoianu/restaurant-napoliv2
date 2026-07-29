@@ -1,17 +1,6 @@
 export default function SwiperContent({ img }) {
   return (
-    <div
-      className='
-        relative
-        w-full
-        h-full
-        rounded-2xl
-        overflow-hidden
-        border border-white/10
-        bg-white/10 dark:bg-black/20
-        backdrop-blur-xl
-      '
-    >
+    <div className='relative w-full h-full rounded-2xl overflow-hidden border border-white/10 bg-white/10 dark:bg-black/20 backdrop-blur-xl'>
       <img
         src={img.src}
         alt='slider image'

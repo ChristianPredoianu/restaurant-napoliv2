@@ -1,4 +1,3 @@
-/* NAVIGATION BUTTONS */
 .menuSwiper .swiper-button-prev,
 .menuSwiper .swiper-button-next {
   width: 52px;
@@ -10,7 +9,6 @@
   transition: all 0.25s ease;
 }
 
-/* arrows */
 .menuSwiper .swiper-button-prev::after,
 .menuSwiper .swiper-button-next::after {
   font-size: 16px;
@@ -18,34 +16,28 @@
   color: white;
 }
 
-/* hover */
 .menuSwiper .swiper-button-prev:hover,
 .menuSwiper .swiper-button-next:hover {
   background: rgba(153, 27, 27, 0.95);
   transform: scale(1.05);
 }
 
-/* DISABLED STATE */
 .menuSwiper .swiper-button-disabled {
   opacity: 0.35 !important;
 
-  /* IMPORTANT FIX */
   pointer-events: auto !important;
 }
 
-/* prevent slide clicks through disabled buttons */
 .menuSwiper .swiper-button-prev,
 .menuSwiper .swiper-button-next {
   z-index: 30;
 }
 
-/* Swiper pagination bullets */
 .swiper-pagination-bullet {
   background: #6b7280 !important; /* gray-500 */
   opacity: 0.5;
 }
 
-/* active bullet */
 .swiper-pagination-bullet-active {
   background: #9ca3af !important; /* gray-400 */
   opacity: 1;

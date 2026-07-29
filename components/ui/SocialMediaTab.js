@@ -9,19 +9,7 @@ export default forwardRef(function SocialMediaTab(props, ref) {
   return (
     <div
       ref={ref}
-      className='
-        flex flex-col items-center gap-5
-
-        px-3 py-5
-
-        rounded-l-2xl
-
-        border border-white/10
-        bg-white/5
-        backdrop-blur-xl
-
-        shadow-[0_20px_60px_rgba(0,0,0,0.4)]
-      '
+      className='flex flex-col items-center gap-5 px-3 py-5 rounded-l-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.4)]'
     >
       {/* Facebook */}
       <a
@@ -32,12 +20,7 @@ export default forwardRef(function SocialMediaTab(props, ref) {
       >
         <FontAwesomeIcon
           icon={faFacebook}
-          className='
-            text-xl
-            text-zinc-300
-            group-hover:text-white
-            transition
-          '
+          className='text-xl text-zinc-300 group-hover:text-white transition'
           style={{
             filter: 'drop-shadow(0 0 10px rgba(153,27,27,0.35))',
           }}
@@ -53,12 +36,7 @@ export default forwardRef(function SocialMediaTab(props, ref) {
       >
         <FontAwesomeIcon
           icon={faInstagram}
-          className='
-            text-xl
-            text-zinc-300
-            group-hover:text-white
-            transition
-          '
+          className='text-xl text-zinc-300 group-hover:text-white transition'
           style={{
             filter: 'drop-shadow(0 0 10px rgba(153,27,27,0.35))',
           }}
@@ -72,12 +50,7 @@ export default forwardRef(function SocialMediaTab(props, ref) {
       >
         <FontAwesomeIcon
           icon={faEnvelope}
-          className='
-            text-xl
-            text-zinc-300
-            group-hover:text-white
-            transition
-          '
+          className='text-xl text-zinc-300 group-hover:text-white transition'
           style={{
             color: brandRed,
             filter: 'drop-shadow(0 0 12px rgba(153,27,27,0.5))',

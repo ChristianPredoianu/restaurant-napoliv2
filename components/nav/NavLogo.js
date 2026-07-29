@@ -4,13 +4,7 @@ export default function NavLogo() {
   return (
     <Link
       href='/'
-      className='
-        flex flex-col
-        transition-transform duration-300
-        hover:scale-105
-        outline-none
-        select-none
-      '
+      className='flex flex-col transition-transform duration-300 hover:scale-105 outline-none select-none'
       aria-label='Napoli Home'
     >
       <div className='cursor-pointer'>

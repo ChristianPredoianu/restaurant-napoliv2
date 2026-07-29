@@ -23,42 +23,25 @@ export default function Kontakt() {
         <title>Restaurang Napoli | Kontakt</title>
       </Head>
 
-      {/* PREMIUM BACKGROUND LAYERS */}
-
       {/* SOCIAL */}
       <div className='hidden md:block fixed right-0 top-40 z-50'>
         <SocialMediaTab />
       </div>
 
-      <main className='container mx-auto px-4 md:px-16  pt-28 md:pt-44 pb-28 space-y-32'>
+      <main className='container mx-auto px-4 md:px-16 pt-28 md:pt-44 pb-28 space-y-32'>
         {/* HERO */}
         <section className='grid lg:grid-cols-2 gap-16 items-center' ref={sectionRef}>
           {/* TEXT */}
           <div className='space-y-6'>
-            <p
-              className='
-                text-xs tracking-[0.35em] uppercase
-                text-zinc-500 dark:text-zinc-400
-              '
-            >
+            <p className='text-xs tracking-[0.35em] uppercase text-zinc-500 dark:text-zinc-400'>
               Kontakt & Event
             </p>
 
-            <h1
-              className='
-                text-5xl md:text-6xl font-extrabold leading-tight
-                text-zinc-900 dark:text-zinc-100
-              '
-            >
+            <h1 className='text-5xl md:text-6xl font-extrabold leading-tight text-zinc-900 dark:text-zinc-100'>
               Napoli i <span className='text-red-600 dark:text-red-500'>Olofström</span>
             </h1>
 
-            <p
-              className='
-                text-lg leading-relaxed max-w-xl
-                text-zinc-700 dark:text-zinc-300
-              '
-            >
+            <p className='text-lg leading-relaxed max-w-xl text-zinc-700 dark:text-zinc-300'>
               Vi skapar allt från mindre middagar till större event — student, företag
               eller födelsedag.
             </p>
@@ -72,11 +55,7 @@ export default function Kontakt() {
               {['Event', 'Catering', 'Födelsedagar', 'Företag'].map((item) => (
                 <span
                   key={item}
-                  className='
-                      px-3 py-1 rounded-full text-sm
-                      bg-zinc-100 border border-zinc-200 text-zinc-700
-                      dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-300
-                    '
+                  className='px-3 py-1 rounded-full text-sm bg-zinc-100 border border-zinc-200 text-zinc-700 dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-300'
                 >
                   {item}
                 </span>
@@ -86,13 +65,7 @@ export default function Kontakt() {
 
           {/* IMAGE CARD */}
           <div className='relative'>
-            <div
-              className='
-                rounded-3xl overflow-hidden
-                border border-zinc-200 dark:border-zinc-800
-                shadow-2xl
-              '
-            >
+            <div className='rounded-3xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-2xl'>
               <img
                 src={HamburgerImg.src}
                 alt='Hamburgare'
@@ -101,25 +74,14 @@ export default function Kontakt() {
             </div>
 
             {/* subtle glow */}
-            <div
-              className='
-                absolute -inset-2 rounded-3xl
-                bg-gradient-to-r from-red-500/10 to-transparent
-                blur-2xl -z-10
-              '
-            />
+            <div className='absolute -inset-2 rounded-3xl bg-gradient-to-r from-red-500/10 to-transparent blur-2xl -z-10' />
           </div>
         </section>
 
         {/* OPEN HOURS */}
         <section className='max-w-5xl mx-auto space-y-10'>
           <div className='text-center space-y-2'>
-            <h2
-              className='
-                text-3xl md:text-4xl font-bold
-                text-zinc-900 dark:text-zinc-100
-              '
-            >
+            <h2 className='text-3xl md:text-4xl font-bold text-zinc-900 dark:text-zinc-100'>
               Öppettider
             </h2>
             <p className='text-zinc-500 dark:text-zinc-400'>
@@ -131,21 +93,9 @@ export default function Kontakt() {
             {openHoursData.map((item) => (
               <div
                 key={item.days}
-                className='
-                    group rounded-2xl p-6 space-y-4
-                    bg-white border border-zinc-200
-                    dark:bg-zinc-900/60 dark:border-zinc-800
-
-                    hover:border-red-500/40
-                    transition-all duration-300
-                  '
+                className='group rounded-2xl p-6 space-y-4 bg-white border border-zinc-200 dark:bg-zinc-900/60 dark:border-zinc-800 hover:border-red-500/40 transition-all duration-300'
               >
-                <h3
-                  className='
-                    text-lg font-semibold
-                    text-zinc-900 dark:text-zinc-100
-                  '
-                >
+                <h3 className='text-lg font-semibold text-zinc-900 dark:text-zinc-100'>
                   {item.days}
                 </h3>
 
@@ -172,14 +122,7 @@ export default function Kontakt() {
 
           {/* PHONE CTA */}
           <div className='flex justify-center pt-6'>
-            <div
-              className='
-                flex items-center gap-4 px-6 py-4 rounded-2xl
-                bg-white border border-zinc-200
-                dark:bg-zinc-900 dark:border-zinc-800
-                shadow-md
-              '
-            >
+            <div className='flex items-center gap-4 px-6 py-4 rounded-2xl bg-white border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800 shadow-md'>
               <span className='text-zinc-500 dark:text-zinc-400'>Ring oss</span>
 
               <div className='flex items-center gap-2 text-red-500 font-bold text-lg'>
