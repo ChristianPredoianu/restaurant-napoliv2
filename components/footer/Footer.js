@@ -6,21 +6,17 @@ import { faFacebook, faInstagram, faEnvelope } from '@fortawesome/free-brands-sv
 import NavLogo from '@/components/nav/NavLogo';
 
 export default function Footer() {
-  const Map = useMemo(
-    () =>
-      dynamic(() => import('@/components/ui/LeafletMap'), {
-        loading: () => (
-          <div className='h-full w-full flex items-center justify-center text-zinc-400'>
-            Laddar karta...
-          </div>
-        ),
-        ssr: false,
-      }),
-    [],
-  );
+  const Map = dynamic(() => import('@/components/ui/LeafletMap'), {
+    loading: () => (
+      <div className='h-full w-full flex items-center justify-center text-zinc-400'>
+        Laddar karta...
+      </div>
+    ),
+    ssr: false,
+  });
 
   return (
-    <footer className='relative w-full overflow-hidden border-t border-white/10 bg-zinc-950 gray-900 dark:text-zink-200'>
+    <footer className='relative w-full overflow-hidden border-t border-white/10 bg-zinc-950  dark:text-zink-200'>
       {/* ambient glow */}
       <div className='absolute top-[-200px] left-[-200px] w-[500px] h-[500px] bg-red-500/10 blur-[140px]' />
       <div className='absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-amber-500/10 blur-[160px]' />
@@ -70,6 +66,7 @@ export default function Footer() {
                 href='https://www.facebook.com/NapoliRestaurang'
                 target='_blank'
                 rel='noreferrer'
+                aria-label='Facebook'
                 className='p-3 rounded-full bg-white/5 hover:bg-white/10 transition hover:scale-105'
               >
                 <FontAwesomeIcon icon={faFacebook} />
@@ -78,6 +75,7 @@ export default function Footer() {
                 href='https://www.instagram.com/napoli_restaurang/'
                 target='_blank'
                 rel='noreferrer'
+                aria-label='Instagram'
                 className='p-3 rounded-full bg-white/5 hover:bg-white/10 transition hover:scale-105'
               >
                 <FontAwesomeIcon icon={faInstagram} />

@@ -283,15 +283,15 @@
         "id": "3",
         "name": "Viking pizza",
         "content": "Kebabkött/gyros, skinka, lök, starkt kryddad, valfri sås",
-        "priceNormal": "145",
+        "priceNormal": "150",
         "priceFamily": "350"
       },
       {
         "id": "4",
         "name": "Vikingbåt",
         "content": "Kebabkött/gyros, skinka, lök, valfri sås (halvinbakad)",
-        "priceNormal": "145",
-        "priceFamily": "350"
+        "priceNormal": "150",
+        "priceFamily": ""
       },
       {
         "id": "5",
@@ -304,7 +304,7 @@
         "id": "6",
         "name": "Kebab Special",
         "content": "Kebab/gyros isbergssallad, tomater, gurka, lök, feferoni, valfri sås",
-        "priceNormal": "145",
+        "priceNormal": "150",
         "priceFamily": "350"
       },
       {
@@ -318,14 +318,14 @@
         "id": "8",
         "name": "Kebab Super",
         "content": "Kebab/gyros, pommes isbergssallad, tomater, gurka, lök, feferoni, valfri sås",
-        "priceNormal": "155",
+        "priceNormal": "160",
         "priceFamily": "360"
       },
       {
         "id": "9",
         "name": "Mexikansk kebabpizza",
         "content": "Svamp,lök, jalapeno, gyros, vitlök, tacosås, tacokryddmix",
-        "priceNormal": "155",
+        "priceNormal": "160",
         "priceFamily": "360"
       }
     ],
@@ -416,61 +416,61 @@
       {
         "id": "1",
         "name": "Pizza Mozzarella",
-        "content": "Husets tomatsås, mozzarella",
-        "price": "135"
+        "content": "San Marzano tomatsås, mozzarella",
+        "price": "145"
       },
       {
         "id": "2",
         "name": "Parma Parma",
-        "content": "Husets tomatsås, mozzarella, parmaskinka,, parmesan & ruccola",
+        "content": "San Marzano tomatsås, mozzarella, parmaskinka,, parmesan & ruccola",
         "price": "160"
       },
       {
         "id": "3",
         "name": "Diavola",
-        "content": "Husets tomatsås, mozzarella, stark salami, rödlök, parmesan & ruccola",
+        "content": "San Marzano tomatsås, mozzarella, stark salami, rödlök, parmesan & ruccola",
         "price": "160"
       },
       {
         "id": "4",
         "name": "Verde",
-        "content": " Husets tomatsås, mozzarella, svamp, zuccini, sparris, aubergine, coctailtomater, parmesan & ruccola",
+        "content": " San Marzano tomatsås, mozzarella, svamp, zuccini, sparris, aubergine, coctailtomater, parmesan & ruccola",
         "price": "160"
       },
       {
         "id": "5",
         "name": "La Siciliana",
-        "content": "Husets tomatsås, mozzarella, sardeller, kapris, oliver, färsk vitlök",
+        "content": "San Marzano tomatsås, mozzarella, sardeller, kapris, oliver, färsk vitlök",
         "price": "180"
       },
       {
         "id": "6",
         "name": "Breasola",
-        "content": "Husets tomatsås, mozzarella, svamp, Breasola, parmesan & ruccola",
+        "content": "San Marzano tomatsås, mozzarella, svamp, Breasola, parmesan & ruccola",
         "price": "200"
       },
       {
         "id": "7",
         "name": "Carpaccio",
-        "content": "Husets tomatsås, Breasola, tryffelkräm, pinjenötter, balsamico, ruccola",
+        "content": "San Marzano tomatsås, Breasola, tryffelkräm, pinjenötter, balsamico, ruccola",
         "price": "200"
       },
       {
         "id": "8",
         "name": "Pollo",
-        "content": "Husets tomatsås, mozzarella, strimlad kycklingfilé, pesto, coctailtomater, ruccola",
+        "content": "San Marzano tomatsås, mozzarella, strimlad kycklingfilé, pesto, coctailtomater, ruccola",
         "price": "200"
       },
       {
         "id": "9",
         "name": "Frutti di Mare",
-        "content": "Husets tomatsås, mozzarella, räkor, bläckfisk, blåmusslor, färsk vitlök, ruccola",
-        "price": "180"
+        "content": "San Marzano tomatsås, mozzarella, räkor, bläckfisk, blåmusslor, färsk vitlök, ruccola",
+        "price": "200"
       },
       {
         "id": "10",
         "name": "Chevré",
-        "content": "Husets tomatsås, parmaskinka, chevré, valnötter, honung, ruccola",
+        "content": "San Marzano tomatsås, parmaskinka, chevré, valnötter, honung, ruccola",
         "price": "190"
       },
       {

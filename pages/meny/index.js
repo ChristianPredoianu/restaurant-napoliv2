@@ -20,24 +20,8 @@ export default function Meny() {
   const sliderRef = useRef(null);
   const arrowDownRef = useRef(null);
   const ref = useRef({ headingRef, headingContainerRef });
-  const kebabRef = useRef(null);
-  const pizzaRef = useRef(null);
-  const hamburgerRef = useRef(null);
-  const meatRef = useRef(null);
-  const saladRef = useRef(null);
-  const plankRef = useRef(null);
-  const pastaRef = useRef(null);
-  const potatoesRef = useRef(null);
-  const mealRefs = useRef({
-    kebabRef,
-    pizzaRef,
-    hamburgerRef,
-    meatRef,
-    saladRef,
-    pastaRef,
-    plankRef,
-    potatoesRef,
-  });
+
+  const menuCardsRef = useRef(null);
 
   const sectionRef = useRef(null);
   useScrollReveal(sectionRef);
@@ -46,7 +30,6 @@ export default function Meny() {
   const tl = gsap.timeline();
 
   const [scrollToSection] = useScrollToSection();
-
   const [isAnimation] = useAnimationSessionStorage('isMenuHeadingsAnimated');
 
   useIsomorphicLayoutEffect(() => {
@@ -74,38 +57,43 @@ export default function Meny() {
         opacity: 0,
       });
     }
-
     return () => tl.kill();
   }, []);
 
   function scrollToSectionHandler(text) {
+    const sections = menuCardsRef.current;
+    if (!sections) return;
+
     switch (text) {
       case 'Kebab':
-        scrollToSection(kebabRef);
+        scrollToSection(sections.kebabRef);
         break;
       case 'Pizza':
-        scrollToSection(pizzaRef);
+        scrollToSection(sections.pizzaRef);
         break;
       case 'Hamburgare':
-        scrollToSection(hamburgerRef);
+        scrollToSection(sections.hamburgerRef);
         break;
       case 'Kött':
-        scrollToSection(meatRef);
+        scrollToSection(sections.meatRef);
         break;
       case 'Sallad':
-        scrollToSection(saladRef);
+        scrollToSection(sections.saladRef);
         break;
       case 'Pasta':
-        scrollToSection(pastaRef);
+        scrollToSection(sections.pastaRef);
         break;
       case 'Planka':
-        scrollToSection(plankRef);
+        scrollToSection(sections.plankRef);
         break;
       case 'Potatis':
-        scrollToSection(potatoesRef);
+        scrollToSection(sections.potatoesRef);
         break;
       case 'Fisk':
-        scrollToSection(meatRef);
+        scrollToSection(sections.meatRef);
+        break;
+      default:
+        break;
     }
   }
 
@@ -122,10 +110,13 @@ export default function Meny() {
         <div className='hidden md:block fixed top-40 right-0 z-50'>
           <SocialMediaTab ref={socialMediaTabRef} />
         </div>
-        <section className='relative pb-20 ' ref={sectionRef}>
-          <MenuPageHeadings ref={ref} />
+        <section className='relative pb-20' ref={sectionRef}>
+          <MenuPageHeadings
+            headingRef={headingRef}
+            headingContainerRef={headingContainerRef}
+          />
           <div className='flex justify-center pb-20' ref={arrowDownRef}>
-            <ScrollArrow arrowDirection={'down'} ref={sliderRef} />
+            <ScrollArrow arrowDirection='down' ref={sliderRef} />
           </div>
           <div className='md:mt-20'>
             <MenuSwiper ref={sliderRef} onScrollToSection={scrollToSectionHandler} />
@@ -145,7 +136,7 @@ export default function Meny() {
             />
           </div>
           <div className='flex gap-10 flex-wrap justify-center mt-20'>
-            <MenuCards ref={mealRefs} />
+            <MenuCards ref={menuCardsRef} />
           </div>
         </section>
       </div>

@@ -1,9 +1,9 @@
+import { useCallback } from 'react';
+
 export default function useScrollToSection() {
-  function scrollToSection(section) {
-    window.scrollTo({
-      top: section.current.offsetTop,
-      behavior: 'smooth',
-    });
-  }
+  const scrollToSection = useCallback((sectionRef) => {
+    sectionRef?.current?.scrollIntoView({ behavior: 'smooth' });
+  }, []);
+
   return [scrollToSection];
 }
